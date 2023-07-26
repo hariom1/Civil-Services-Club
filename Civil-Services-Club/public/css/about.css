@@ -198,9 +198,9 @@ body {
   opacity: 0.8;
   overflow: hidden;
 }
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .content__right .content__main {
-    font-size: 2vw;
+    font-size: 2.1vw;
     overflow: hidden;
   }
 }  

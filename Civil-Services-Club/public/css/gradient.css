@@ -1137,16 +1137,17 @@ blockquote.blockquote::before {
 /* ----- Paralax bg  ----- */
 
 #parallax-bg {
-    background: url(../images/parallax2.jpg) no-repeat;
+    background: url(../images/banner2.jpg) no-repeat;
     padding: 10% 0;
 }
 
 #parallax-bg.parallax-one {
-    background: url(../image/banner.jpg) no-repeat;
+    background: url(../image/banner2.jpg) no-repeat;
+    
 }
 
 .banner-fullscreen {
-    background: url(../images/banner-flat.jpg) no-repeat;
+    background: url(../images/banner1.jpg) no-repeat;
 }
 
 #simple-banner {
