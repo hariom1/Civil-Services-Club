@@ -336,6 +336,7 @@ p {
 .image,
 .image img {
     position: relative;
+    object-position: center;
 }
 
 .image img {
@@ -343,6 +344,8 @@ p {
     -webkit-transition: all .8s linear;
     transition: all .8s linear;
     width: 100%;
+    object-fit:fill;
+
 }
 
 .image {
@@ -4558,7 +4561,11 @@ footer .footer_panel p.address>i,
       transform: translateY(0);
     }
   }
-  
+ .imageadjust{
+    font-style: italic;
+    text-align: left;
+    text-emphasis-position:left;
+} 
   
   
 
