@@ -1320,7 +1320,7 @@ h1,
 
 h2,
 .h2 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     line-height: 1.2
 }
 
@@ -1425,10 +1425,11 @@ blockquote:before {
 }
 
 blockquote p {
-    font-family: "IBM Plex Sans", sans-serif;
-    font-weight: 400;
+    font-family: "-webkit-body";
+    font-style: italic;
+    font-weight: 500;
     padding: 0;
-    font-size: 2.6rem;
+    font-size: 1.6rem;
     line-height: 1.692;
     color: #000
 }
@@ -1658,7 +1659,7 @@ dl,
 form,
 .video-container,
 .cl-custom-select {
-    margin-bottom: 3.2rem
+    margin-bottom: 2rem;
 }
 
 .pace {
