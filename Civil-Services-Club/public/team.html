@@ -1,12 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <title>Civil-services-club-team</title>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Civil Services Club Team</title>
-    <script src="js/team.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/team.css">
+    <meta name="description" content="sara mazal lessons">
+    <meta name="keywords" content="HTML, CSS, JavaScript, mazal, icons">
+    <meta name="author" content="Sara Mazal">
+    <!--  SGVsbG8hIE15IG5hbWUgaXMgU2FyYSBNYXphbC4gV2VsY29tZSB0byBteSBDb2RlUGVuIQ== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;500&family=Raleway:wght@100;200;300;400;500&family=Roboto:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <!-- SGVsbG8hIE15IG5hbWUgaXMgU2FyYSBNYXphbC4gV2VsY29tZSB0byBteSBDb2RlUGVuOiBodHRwczovL2NvZGVwZW4uaW8vU2FyYW1hemFsICYgR2l0SHViOiBodHRwczovL2dpdGh1Yi5jb20vc2FyYW1hemFs -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="css\team.css">
+
 </head>
+
 <body>
-  
+    <!-- partial:index.partial.html -->
+    <section class="nav">
+        <h1>OUR TEAM</h1>
+        <h3 class="span loader"><span class="m">F</span><span class="m">a</span><span class="m">m</span><span
+                class="m">i</span><span class="m">l</span><span class="m">y</span><span class="m">&nbsp;</span><span
+                class="m">O</span><span class="m">f</span><span class="m">&nbsp;</span><span class="m">O</span><span
+                class="m">u</span><span class="m">r</span><span class="m">&nbsp;</span><span class="m">C</span><span
+                class="m">l</span><span class="m">u</span><span class="m">b</span></h3>
+    </section>
+    <canvas style="height: 55%; width: 100%;" class="background" width="1627" height="958"></canvas>
+    <section class="card" style="height: 45%; width: 100%; position: absolute; z-index: 3; background-color: white;">
+        <h3>HEADS</h3>
+    </section>
+    <!-- partial -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
+    <script>
+        /* Credit and Thanks:
+        Matrix - Particles.js;
+        SliderJS - Ettrics;
+        Design - Sara Mazal Web;
+        Fonts - Google Fonts
+        */
+
+        window.onload = function () {
+            Particles.init({
+                selector: ".background"
+            });
+        };
+        const particles = Particles.init({
+            selector: ".background",
+            color: ["#03dac6", "#ff0266", "#000000"],
+            connectParticles: true,
+            responsive: [
+                {
+                    breakpoint: 768,
+                    options: {
+                        color: ["#faebd7", "#03dac6", "#ff0266"],
+                        maxParticles: 43,
+                        connectParticles: false
+                    }
+                }
+            ]
+        });
+
+        class NavigationPage {
+            constructor() {
+                this.currentId = null;
+                this.currentTab = null;
+                this.tabContainerHeight = 70;
+                this.lastScroll = 0;
+                let self = this;
+                $(".nav-tab").click(function () {
+                    self.onTabClick(event, $(this));
+                });
+                $(window).scroll(() => {
+                    this.onScroll();
+                });
+                $(window).resize(() => {
+                    this.onResize();
+                });
+            }
+
+            onTabClick(event, element) {
+                event.preventDefault();
+                let scrollTop =
+                    $(element.attr("href")).offset().top - this.tabContainerHeight + 1;
+                $("html, body").animate({ scrollTop: scrollTop }, 600);
+            }
+
+            onScroll() {
+                this.checkHeaderPosition();
+                this.findCurrentTabSelector();
+                this.lastScroll = $(window).scrollTop();
+            }
+
+            onResize() {
+                if (this.currentId) {
+                    this.setSliderCss();
+                }
+            }
+
+            checkHeaderPosition() {
+                const headerHeight = 75;
+                if ($(window).scrollTop() > headerHeight) {
+                    $(".nav-container").addClass("nav-container--scrolled");
+                } else {
+                    $(".nav-container").removeClass("nav-container--scrolled");
+                }
+                let offset =
+                    $(".nav").offset().top +
+                    $(".nav").height() -
+                    this.tabContainerHeight -
+                    headerHeight;
+                if (
+                    $(window).scrollTop() > this.lastScroll &&
+                    $(window).scrollTop() > offset
+                ) {
+                    $(".nav-container").addClass("nav-container--move-up");
+                    $(".nav-container").removeClass("nav-container--top-first");
+                    $(".nav-container").addClass("nav-container--top-second");
+                } else if (
+                    $(window).scrollTop() < this.lastScroll && $(window).scrollTop() > offset
+                ) {
+                    $(".nav-container").removeClass("nav-container--move-up");
+                    $(".nav-container").removeClass("nav-container--top-second");
+                    $(".nav-container-container").addClass("nav-container--top-first");
+                } else {
+                    $(".nav-container").removeClass("nav-container--move-up");
+                    $(".nav-container").removeClass("nav-container--top-first");
+                    $(".nav-container").removeClass("nav-container--top-second");
+                }
+            }
+
+            findCurrentTabSelector(element) {
+                let newCurrentId;
+                let newCurrentTab;
+                let self = this;
+                $(".nav-tab").each(function () {
+                    let id = $(this).attr("href");
+                    let offsetTop = $(id).offset().top - self.tabContainerHeight;
+                    let offsetBottom =
+                        $(id).offset().top + $(id).height() - self.tabContainerHeight;
+                    if (
+                        $(window).scrollTop() > offsetTop &&
+                        $(window).scrollTop() < offsetBottom) { newCurrentId = id; newCurrentTab = $(this); }
+                }); if (this.currentId
+                    != newCurrentId || this.currentId === null) {
+                    this.currentId = newCurrentId; this.currentTab = newCurrentTab;
+                    this.setSliderCss();
+                }
+            } setSliderCss() {
+                let width = 0; let left = 0; if (this.currentTab) {
+                    width = this.currentTab.css("width"); left = this.currentTab.offset().left;
+                } $(".nav-tab-slider").css("width",
+                    width); $(".nav-tab-slider").css("left", left);
+            }
+        } new NavigationPage(); /* Credit and Thanks: Matrix -
+            Particles.js; SliderJS - Ettrics; Design - Sara Mazal Web; Fonts - Google Fonts */</script>
+
+</body>
+
 </html>

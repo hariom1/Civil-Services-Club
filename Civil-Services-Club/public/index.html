@@ -9,6 +9,16 @@
     <script src="js/modernizr.js"></script>
     <!-- Open Sans from Google Webfonts -->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css\blog1.css" />
+    <link rel="stylesheet" href="css\blog.imgText.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <!-- Main styles file -->
     <link rel="stylesheet" href="css/styles.css" />
     <!-- Icons via Font Awesome -->
@@ -28,26 +38,58 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
     <link rel="icon" href="images/favicon.png">
-    
-    </head>
+    <style>
+        .demo-row {
+            background-color: #333;
+            padding: 50px 0;
+        }
+
+
+        /*Implement*/
+        .sponsor-feature {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            min-height: 176px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 5px 0;
+        }
+
+        #id-sponsors .carousel {
+            margin-bottom: 20px;
+        }
+
+        #id-sponsors .item {
+            padding-bottom: 20px;
+        }
+
+        #id-sponsors .carousel-indicators {
+            bottom: -25px;
+        }
+    </style>
+
+</head>
 
 <body data-spy="scroll" data-target=".navbar-nav" data-offset="90">
-    
+
     <!-- Animated background -->
     <canvas id="bg-canvas"></canvas>
-        <!--navbar-->
-      <!-- header -->
+    <!--navbar-->
+    <!-- header -->
     <header class="site-header">
         <nav class="navbar navbar-expand-lg transparent-bg-dark">
             <div class="container">
                 <a class="navbar-brand" href="index.html">
-         <img src="images/logo.png" alt="logo">
-         </a>
-                <button class="navbar-toggler navbar-toggler-right collapsed" type="button" data-toggle="collapse" data-target="#wenav">
-            <span> </span>
-            <span> </span>
-            <span> </span>
-         </button>
+                    <img src="images/logo.png" alt="logo">
+                </a>
+                <button class="navbar-toggler navbar-toggler-right collapsed" type="button" data-toggle="collapse"
+                    data-target="#wenav">
+                    <span> </span>
+                    <span> </span>
+                    <span> </span>
+                </button>
                 <div class="collapse navbar-collapse" id="wenav">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
@@ -75,18 +117,22 @@
                 </div>
 
                 <div class="nav-social">
-                    <ul class="social_icon"> <!--black noborder--> 
-                        <li><a href="https://www.linkedin.com/company/civil-services-club-iitkgp/" target="_blank"><i class="fa fa-linkedin"></i></a> </li>
-                        <li><a href="https://www.instagram.com/civilservicesclub.iitkgp/" target="_blank"><i class="fa fa-instagram"></i> </a> </li>
-                        <li><a href="https://www.facebook.com/civilservicesclub.iitkgp" target="_blank"><i class="fa fa-facebook"></i> </a> </li>
-                        <li><a href="https://www.youtube.com/@civilservicesclub.iitkgp" target="_blank"><i class="fa fa-youtube"></i> </a> </li>
+                    <ul class="social_icon"> <!--black noborder-->
+                        <li><a href="https://www.linkedin.com/company/civil-services-club-iitkgp/" target="_blank"><i
+                                    class="fa fa-linkedin"></i></a> </li>
+                        <li><a href="https://www.instagram.com/civilservicesclub.iitkgp/" target="_blank"><i
+                                    class="fa fa-instagram"></i> </a> </li>
+                        <li><a href="https://www.facebook.com/civilservicesclub.iitkgp" target="_blank"><i
+                                    class="fa fa-facebook"></i> </a> </li>
+                        <li><a href="https://www.youtube.com/@civilservicesclub.iitkgp" target="_blank"><i
+                                    class="fa fa-youtube"></i> </a> </li>
                     </ul>
                 </div>
 
                 <!--side menu open button-->
                 <a href="javascript:void(0)" class="d-none d-lg-inline-block sidemenu_btn" id="sidemenu_toggle">
-          <span></span> <span></span> <span></span>
-       </a>
+                    <span></span> <span></span> <span></span>
+                </a>
             </div>
         </nav>
 
@@ -95,8 +141,8 @@
             <div class="inner-wrapper">
                 <span class="btn-close" id="btn_sideNavClose"><i></i><i></i></span>
                 <a class="navbar-brand" href="mid.html">
-          <!--  <img src="images/logo.png" alt="logo">-->
-         </a>
+                    <!--  <img src="images/logo.png" alt="logo">-->
+                </a>
                 <nav class="side-nav ">
                     <ul class="navbar-nav">
                         <li class="nav-item">
@@ -121,23 +167,28 @@
                             <a class="nav-link pagescroll" href="#contactus">Alumni</a>
                         </li>
                     </ul>
-                
-                <div class="side-footer w-100">
-                    <ul class="social-icons-simple ">
-                        <li><a href="https://www.linkedin.com/company/civil-services-club-iitkgp/" target="_blank"><i class="fa fa-linkedin"></i></a> </li>
-                        <li><a href="https://www.instagram.com/civilservicesclub.iitkgp/" target="_blank"><i class="fa fa-instagram"></i> </a> </li>
-                        <li><a href="https://www.facebook.com/civilservicesclub.iitkgp" target="_blank"><i class="fa fa-facebook"></i> </a> </li>
-                        <li><a href="https://www.youtube.com/@civilservicesclub.iitkgp" target="_blank"><i class="fa fa-youtube"></i> </a> </li>
-                    </ul>
-                 <!---->   <p style="color: black;">&copy; 2023 civilservicesclub. Made With Love by Tech Team</p>
+
+                    <div class="side-footer w-100">
+                        <ul class="social-icons-simple ">
+                            <li><a href="https://www.linkedin.com/company/civil-services-club-iitkgp/"
+                                    target="_blank"><i class="fa fa-linkedin"></i></a> </li>
+                            <li><a href="https://www.instagram.com/civilservicesclub.iitkgp/" target="_blank"><i
+                                        class="fa fa-instagram"></i> </a> </li>
+                            <li><a href="https://www.facebook.com/civilservicesclub.iitkgp" target="_blank"><i
+                                        class="fa fa-facebook"></i> </a> </li>
+                            <li><a href="https://www.youtube.com/@civilservicesclub.iitkgp" target="_blank"><i
+                                        class="fa fa-youtube"></i> </a> </li>
+                        </ul>
+                        <!---->
+                        <p style="color: black;">&copy; 2023 civilservicesclub. Made With Love by Tech Team</p>
                     </div>
                 </nav>
-                </div>
             </div>
+        </div>
         </div>
         <a id="close_side_menu" href="javascript:void(0);"></a>
     </header>
-          <!-- Main Slider
+    <!-- Main Slider
     <section id="revo_main_wrapper" class="rev_slider_wrapper fullwidthbanner-container">
         <div id="main-banner" class="rev_slider fullwidthabanner" style="display:none;" data-version="5.4.1">
             <ul>
@@ -181,24 +232,27 @@
             text-align: center;
             top: 50%;
             width: 100%;">
-    
-                <h1 class="text-capitalize font-light darkcolor text-center text-appear slide-left">Civil Services Club</h1>
-    
+
+                <h1 class="text-capitalize font-light darkcolor text-center text-appear slide-left">Civil Services Club
+                </h1>
+
                 <h1 class="text-capitalize font-bold darkcolor text-center text-appear slide-right">IIT Kharagpur</h1>
-    
+
                 <h6><br></h6>
-    
-                <h4 class="darkcolor font-light text-center text-appear slide-up">Connecting Ambitions, Shaping Civil Service Careers </h4>
-    
+
+                <h4 class="darkcolor font-light text-center text-appear slide-up">Connecting Ambitions, Shaping Civil
+                    Service Careers </h4>
+
                 <h6><br></h6>
-                
+
             </li>
-        </ul> </div>
-       
-    
-    
-    
-                  <!--  <div class="time hours">
+        </ul>
+    </div>
+
+
+
+
+    <!--  <div class="time hours">
                         <div class="value">00</div>
                         <div class="unit">Hours</div>
                     </div>
@@ -219,390 +273,520 @@
     </div> -->
 
     <!-- Second screen -->
-    
+
     <div class="overlap">
-           
+
         <!-- Link "Scroll down to learn more" -->
         <a href="" class="more">Scroll down <i class="fa fa-chevron-down"></i>to learn more</a>
-            
+
         <p><br></p>
-        
+
         <iframe src="about.html" width="100%" height="350px" style="border: none;
         outline: none; overflow: hidden;"></iframe>
 
-  <!--about-->
-  
-  
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
-        <style>@keyframes fadeInUp {
-            0% {
-              opacity: 0;
-              transform: translateY(50px);
-            }
-            100% {
-              opacity: 1;
-              transform: translateY(0);
-            }
-          }
-          
-          .wow {
-            visibility: hidden;
-          }
-          
-          
-          </style>
-  <section id="about" class="padding" data-aos="fade-up" style="color: black;">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-12 text-center">
-          <h2 class="heading darkcolor" style="color: black;"><span>Campus</span> Initiative<span class="divider-center"></span></h2>
-        </div>
-      </div>
-      <div class="icon_wraper row">
-        <div class="col-md-4 col-sm-6">
-          <div class="icon_box text-center margin_tophalf" data-aos="fade-up" data-aos-offset="150">
-            <i class="fa fa-bar-chart"></i>
-            <h4 class="text-capitalize darkcolor bottom20 margin10" style="color: black;" >UPSC Talks</h4>
-            <p class="no_bottom">Keep away from people who try to belittle your ambitions. Small people always do that but the really great.</p>
-          </div>
-        </div>
-        <div class="col-md-4 col-sm-6">
-          <div class="icon_box text-center margin_tophalf" data-aos="fade-up" data-aos-offset="150">
-            <i class="fa fa-server"></i>
-            <h4 class="text-capitalize darkcolor bottom20 margin10" style="color: black;" >Mentorship Program</h4>
-            <p class="no_bottom">Keep away from people who try to belittle your ambitions. Small people always do that but the really great.</p>
-          </div>
-        </div>
-        <div class="col-md-4 col-sm-6">
-          <div class="icon_box text-center margin_tophalf" data-aos="fade-up" data-aos-offset="150">
-            <i class="fa fa-globe"></i>
-            <h4 class="text-capitalize darkcolor bottom20 margin10" style="color: black;" >Sansad</h4>
-            <p class="no_bottom">Keep away from people who try to belittle your ambitions. Small people always do that but the really great.</p>
-          </div>
-        </div>
-        <div class="col-md-4 col-sm-6">
-          <div class="icon_box text-center margin_tophalf" data-aos="fade-up" data-aos-offset="200">
-            <i class="fa fa-support"></i>
-            <h4 class="text-capitalize darkcolor bottom20 margin10" style="color: black;" >Model United Nation</h4>
-            <p class="no_bottom">Keep away from people who try to belittle your ambitions. Small people always do that but the really great.</p>
-          </div>
-        </div>
-        <div class="col-md-4 col-sm-6">
-          <div class="icon_box text-center margin_tophalf" data-aos="fade-up" data-aos-offset="200">
-            <i class="fa fa-cubes"></i>
-            <h4 class="text-capitalize darkcolor bottom20 margin10" style="color: black;" >Publications</h4>
-            <p class="no_bottom">Keep away from people who try to belittle your ambitions. Small people always do that but the really great.</p>
-          </div>
-        </div>
-        <div class="col-md-4 col-sm-6">
-          <div class="icon_box text-center margin_tophalf" data-aos="fade-up" data-aos-offset="200">
-            <i class="fa fa-laptop"></i>
-            <h4 class="text-capitalize darkcolor bottom20 margin10" style="color: black;" >Knowledge Hunt</h4>
-            <p class="no_bottom">Keep away from people who try to belittle your ambitions. Small people always do that but the really great.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+        <!--about-->
 
-      
 
-       
-    
-        <!--Paralax Background -->
-    <section id="parallax-bg" class="parallax-one parallaxie">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 text-center wow bounceIn">
-                    <p class="bottom10 whitecolor" style="color: rgb(179, 177, 177);" >Unleash your creative potential with Webox</p>
-                    <h1 class="bottom25 whitecolor font-light2" style="color: rgb(188, 185, 185);" >Looking For Exclusive Digital Services?</h1>
-                    <a href="javascript:void(0)" class="btn_common white_transparent">FAQs</a>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+        <style>
+            @keyframes fadeInUp {
+                0% {
+                    opacity: 0;
+                    transform: translateY(50px);
+                }
+
+                100% {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            .wow {
+                visibility: hidden;
+            }
+        </style>
+        <section id="about" class="padding" data-aos="fade-up" style="color: black;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 text-center">
+                        <h2 class="heading darkcolor" style="color: black;"><span>Campus</span> Initiative<span
+                                class="divider-center"></span></h2>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </section>
-    <!--Paralax Backgroun ends -->
-    
-     <!-- Team -->
-     <section id="our-team" class="padding bg_light" >
-        <div class="container" >
-            <div class="row">
-                <div class="col-md-12 wow fadeIn text-center" data-wow-delay="300ms">
-                    <h2 class="heading heading_space darkcolor" style="color: black;" ><span>Our </span> Achievers<span class="divider-center"></span></h2>
-                </div>
-            </div>
-            <div id="team_slider" class="owl-carousel">
-                <div class="item">
-                    <div class="team-box firstcolor">
-                        <div class="image">
-                            <img src="image/Screenshot (38).png" alt="ERROR" height="350px">
-                            <div class="overlay center-block">
-                                <ul class="social_icon whitebg">
-                                    <div class="imageadjust">
-                                    <li><h2>Bhuvana Pranith Pappula</h2></li><br>
-                                    <li><h3>Air Rank:-501</h3> </li><br>
-                                    <li><h3>Hall:-Patel Hall</h3></li><br>
-                                    <li><h4>Department:-Mining Engineering</h4></li><br>
-                                    <li><h4>Batch:-2017</h4></li></div><br>
-                                    
-                                </ul>
-                            </div>
+                <div class="icon_wraper row">
+                    <div class="col-md-4 col-sm-6">
+                        <div class="icon_box text-center margin_tophalf" data-aos="fade-up" data-aos-offset="150">
+                            <i class="fa fa-bar-chart"></i>
+                            <h4 class="text-capitalize darkcolor bottom20 margin10" style="color: black;">UPSC Talks
+                            </h4>
+                            <p class="no_bottom">Keep away from people who try to belittle your ambitions. Small people
+                                always do that but the really great.</p>
                         </div>
-                       <!-- <div class="team-content darkcolor">
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="icon_box text-center margin_tophalf" data-aos="fade-up" data-aos-offset="150">
+                            <i class="fa fa-server"></i>
+                            <h4 class="text-capitalize darkcolor bottom20 margin10" style="color: black;">Mentorship
+                                Program</h4>
+                            <p class="no_bottom">Keep away from people who try to belittle your ambitions. Small people
+                                always do that but the really great.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="icon_box text-center margin_tophalf" data-aos="fade-up" data-aos-offset="150">
+                            <i class="fa fa-globe"></i>
+                            <h4 class="text-capitalize darkcolor bottom20 margin10" style="color: black;">Sansad</h4>
+                            <p class="no_bottom">Keep away from people who try to belittle your ambitions. Small people
+                                always do that but the really great.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="icon_box text-center margin_tophalf" data-aos="fade-up" data-aos-offset="200">
+                            <i class="fa fa-support"></i>
+                            <h4 class="text-capitalize darkcolor bottom20 margin10" style="color: black;">Model United
+                                Nation</h4>
+                            <p class="no_bottom">Keep away from people who try to belittle your ambitions. Small people
+                                always do that but the really great.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="icon_box text-center margin_tophalf" data-aos="fade-up" data-aos-offset="200">
+                            <i class="fa fa-cubes"></i>
+                            <h4 class="text-capitalize darkcolor bottom20 margin10" style="color: black;">Publications
+                            </h4>
+                            <p class="no_bottom">Keep away from people who try to belittle your ambitions. Small people
+                                always do that but the really great.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="icon_box text-center margin_tophalf" data-aos="fade-up" data-aos-offset="200">
+                            <i class="fa fa-laptop"></i>
+                            <h4 class="text-capitalize darkcolor bottom20 margin10" style="color: black;">Knowledge Hunt
+                            </h4>
+                            <p class="no_bottom">Keep away from people who try to belittle your ambitions. Small people
+                                always do that but the really great.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+        <!--Paralax Background -->
+        <section id="parallax-bg" class="parallax-one parallaxie">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center wow bounceIn">
+                        <p class="bottom10 whitecolor" style="color: rgb(179, 177, 177);">Unleash your creative
+                            potential with Webox</p>
+                        <h1 class="bottom25 whitecolor font-light2" style="color: rgb(188, 185, 185);">Looking For
+                            Exclusive Digital Services?</h1>
+                        <a href="javascript:void(0)" class="btn_common white_transparent">FAQs</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Paralax Backgroun ends -->
+
+        <!-- Team -->
+        <section id="our-team" class="padding bg_light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 wow fadeIn text-center" data-wow-delay="300ms">
+                        <h2 class="heading heading_space darkcolor" style="color: black;"><span>Our </span>
+                            Achievers<span class="divider-center"></span></h2>
+                    </div>
+                </div>
+                <div id="team_slider" class="owl-carousel">
+                    <div class="item">
+                        <div class="team-box firstcolor">
+                            <div class="image">
+                                <img src="image/Screenshot (38).png" alt="ERROR" height="350px">
+                                <div class="overlay center-block">
+                                    <ul class="social_icon whitebg">
+                                        <div class="imageadjust">
+                                            <li>
+                                                <h2>Bhuvana Pranith Pappula</h2>
+                                            </li><br>
+                                            <li>
+                                                <h3>Air Rank:-501</h3>
+                                            </li><br>
+                                            <li>
+                                                <h3>Hall:-Patel Hall</h3>
+                                            </li><br>
+                                            <li>
+                                                <h4>Department:-Mining Engineering</h4>
+                                            </li><br>
+                                            <li>
+                                                <h4>Batch:-2017</h4>
+                                            </li>
+                                        </div><br>
+
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- <div class="team-content darkcolor">
                             <h3>Crypcs Walkin.</h3>
                             <p class="nomargin">CEO, The webox Company</p>
                         </div>-->
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="team-box secondcolor">
-                        <div class="image">
-                            <img src="image/harsh.jpg" alt="ERROR" height="350px">
-                            <div class="overlay center-block">
-                                <ul class="social_icon whitebg">
-                                <div class="imageadjust">
-                                    <li><p><h2>Harsh Parashar </h2></p></li><br>
-                                    <li><p><h3>Air Rank:-143</h3></p></li><br>
-                                    <li><h3>Hall:-Azad Hall</h3> </li><br>
-                                    <li><h4>Department:- Electronics and Communication Engineering</h4</li><br>
-                                    <li><h4>Batch:-2017</h4></li><br>
-                                </div>
-                                    
-                                </ul>
-                            </div>
                         </div>
-                       <!-- <div class="team-content darkcolor">
+                    </div>
+                    <div class="item">
+                        <div class="team-box secondcolor">
+                            <div class="image">
+                                <img src="image/harsh.jpg" alt="ERROR" height="350px">
+                                <div class="overlay center-block">
+                                    <ul class="social_icon whitebg">
+                                        <div class="imageadjust">
+                                            <li>
+                                                <p>
+                                                <h2>Harsh Parashar </h2>
+                                                </p>
+                                            </li><br>
+                                            <li>
+                                                <p>
+                                                <h3>Air Rank:-143</h3>
+                                                </p>
+                                            </li><br>
+                                            <li>
+                                                <h3>Hall:-Azad Hall</h3>
+                                            </li><br>
+                                            <li>
+                                                <h4>Department:- Electronics and Communication Engineering</h4< /li><br>
+                                            <li>
+                                                <h4>Batch:-2017</h4>
+                                            </li><br>
+                                        </div>
+
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- <div class="team-content darkcolor">
                             <h3>Sansa Houdor.</h3>
                             <p class="nomargin">CEO, The webox Company</p>
                         </div>>-->
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="team-box thirdcolor">
-                        <div class="image">
-                            <img src="image/rahul.jpg" alt="ERROR" height="350px">
-                            <div class="overlay center-block">
-                                <ul class="social_icon whitebg">
-                                <div class="imageadjust"> 
-                                    <li><p><h2>Rahul Ramesh Atram</h2></p></li><br>
-                                    <li><p><h3>Air Rank:-29</h3></p> </li><br>
-                                    <li><h3>Hall:-Rajendra Prasad Hall</h3></li><br>
-                                    <li><h4>Department:-Electrical Engineering</h4></li><br>
-                                    <li><h4>Batch:-2021</h4> </a> </li>
-                                </div><br>
-                                   
-                                </ul>
-                            </div>
                         </div>
-                       <!-- <div class="team-content darkcolor">
+                    </div>
+                    <div class="item">
+                        <div class="team-box thirdcolor">
+                            <div class="image">
+                                <img src="image/rahul.jpg" alt="ERROR" height="350px">
+                                <div class="overlay center-block">
+                                    <ul class="social_icon whitebg">
+                                        <div class="imageadjust">
+                                            <li>
+                                                <p>
+                                                <h2>Rahul Ramesh Atram</h2>
+                                                </p>
+                                            </li><br>
+                                            <li>
+                                                <p>
+                                                <h3>Air Rank:-29</h3>
+                                                </p>
+                                            </li><br>
+                                            <li>
+                                                <h3>Hall:-Rajendra Prasad Hall</h3>
+                                            </li><br>
+                                            <li>
+                                                <h4>Department:-Electrical Engineering</h4>
+                                            </li><br>
+                                            <li>
+                                                <h4>Batch:-2021</h4> </a>
+                                            </li>
+                                        </div><br>
+
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- <div class="team-content darkcolor">
                             <h3>Criece Smith.</h3>
                             <p class="nomargin">CEO, The webox Company</p>
                         </div>-->
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="team-box firstcolor">
-                        <div class="image">
-                            <img src="image/Screenshot (34).png" alt="ERROR" height="350px">
-                            <div class="overlay center-block">
-                                <ul class="social_icon whitebg">
-                                    <div class="imageadjust">
-                                    <li> <p><h2>Pourush Sood </h2></p></li><br>
-                                    <li><h3> Air Rank:-29</h3> </li><br>
-                                    <li><h3>Hall:-Radha Krishna Hall</h3> </li><br>
-                                    <li><h4>Department:-Electronics and Communication Engineering</h4></li><br>
-                                    <li><h4>Batch:-2020</h4></li></div><br>
-                                </ul>
-                            </div>
                         </div>
-                       <!-- <div class="team-content darkcolor">
+                    </div>
+                    <div class="item">
+                        <div class="team-box firstcolor">
+                            <div class="image">
+                                <img src="image/Screenshot (34).png" alt="ERROR" height="350px">
+                                <div class="overlay center-block">
+                                    <ul class="social_icon whitebg">
+                                        <div class="imageadjust">
+                                            <li>
+                                                <p>
+                                                <h2>Pourush Sood </h2>
+                                                </p>
+                                            </li><br>
+                                            <li>
+                                                <h3> Air Rank:-29</h3>
+                                            </li><br>
+                                            <li>
+                                                <h3>Hall:-Radha Krishna Hall</h3>
+                                            </li><br>
+                                            <li>
+                                                <h4>Department:-Electronics and Communication Engineering</h4>
+                                            </li><br>
+                                            <li>
+                                                <h4>Batch:-2020</h4>
+                                            </li>
+                                        </div><br>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- <div class="team-content darkcolor">
                             <h3>Jhon Layers.</h3>
                             <p class="nomargin">CEO, The webox Company</p>
                         </div>-->
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="team-box secondcolor">
-                        <div class="image">
-                            <img src="image/Screenshot (35).png" alt="ERROR" height="350px">
-                            <div class="overlay center-block">
-                                <ul class="social_icon whitebg">
-                                    <div class="imageadjust"> 
-                                    <li><P><H2>Shivam Kumar</H2></P> </li><br>
-                                    <li><h3>Air Rank:-309</h3> </li><br>
-                                    <li><h3>Hall:-Azad Hall</h3> </li><br>
-                                    <li><h4>Department:-Mechanical Engineering</h4></li><br>
-                                    <li><h4>Batch:-2017</h4></li><br></div>
-                                   
-                                </ul>
-                            </div>
                         </div>
-                       <!-- <div class="team-content darkcolor">
+                    </div>
+                    <div class="item">
+                        <div class="team-box secondcolor">
+                            <div class="image">
+                                <img src="image/Screenshot (35).png" alt="ERROR" height="350px">
+                                <div class="overlay center-block">
+                                    <ul class="social_icon whitebg">
+                                        <div class="imageadjust">
+                                            <li>
+                                                <P>
+                                                <H2>Shivam Kumar</H2>
+                                                </P>
+                                            </li><br>
+                                            <li>
+                                                <h3>Air Rank:-309</h3>
+                                            </li><br>
+                                            <li>
+                                                <h3>Hall:-Azad Hall</h3>
+                                            </li><br>
+                                            <li>
+                                                <h4>Department:-Mechanical Engineering</h4>
+                                            </li><br>
+                                            <li>
+                                                <h4>Batch:-2017</h4>
+                                            </li><br>
+                                        </div>
+
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- <div class="team-content darkcolor">
                             <h3>Robbin Elex.</h3>
                             <p class="nomargin">CEO, The webox Company</p>
                         </div>-->
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="team-box thirdcolor">
-                        <div class="image">
-                            <img src="image/Screenshot (36).png" alt="ERROR" height="350px">
-                            <div class="overlay center-block">
-                                <ul class="social_icon whitebg">
-                                    <div class="imageadjust">
-                                    <li><h2>Anju Joon</h2> </li><br>
-                                    <li><h3>Air Rank:-701</h3></li><br>
-                                    <li><h3>Hall:-Mother Teresa </h3></li><br>
-                                    <li><h4>Department:-Economics</h4></li><br>
-                                    <li><h4>Batch:-2021</h4></li></div><br>
-                                    
-                                </ul>
-                            </div>
                         </div>
-                       <!-- <div class="team-content darkcolor">
+                    </div>
+                    <div class="item">
+                        <div class="team-box thirdcolor">
+                            <div class="image">
+                                <img src="image/Screenshot (36).png" alt="ERROR" height="350px">
+                                <div class="overlay center-block">
+                                    <ul class="social_icon whitebg">
+                                        <div class="imageadjust">
+                                            <li>
+                                                <h2>Anju Joon</h2>
+                                            </li><br>
+                                            <li>
+                                                <h3>Air Rank:-701</h3>
+                                            </li><br>
+                                            <li>
+                                                <h3>Hall:-Mother Teresa </h3>
+                                            </li><br>
+                                            <li>
+                                                <h4>Department:-Economics</h4>
+                                            </li><br>
+                                            <li>
+                                                <h4>Batch:-2021</h4>
+                                            </li>
+                                        </div><br>
+
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- <div class="team-content darkcolor">
                             <h3>Crypcs Walkin.</h3>
                             <p class="nomargin">CEO, The webox Company</p>
                         </div>-->
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="team-box firstcolor">
-                        <div class="image">
-                            <img src="image/Screenshot (37).png" alt="ERROR" height="350px">
-                            <div class="overlay center-block">
-                                <ul class="social_icon whitebg">
-                                    <div class="imageadjust">
-                                    <li> <p><h2>Sandeep Kumar</h2></p></li><br>
-                                    <li><h3>Air Rank:-24</h3> </li><br>
-                                    <li><h3>Hall:-Patel Hall </h3></li><br>
-                                    <li><h4>Department:-Mathematics and Computing</h4></li><br>
-                                    <li><h4>Batch:-2019</h4></li></div><br>
-                                    
-                                </ul>
-                            </div>
                         </div>
-                       <!-- <div class="team-content darkcolor">
+                    </div>
+                    <div class="item">
+                        <div class="team-box firstcolor">
+                            <div class="image">
+                                <img src="image/Screenshot (37).png" alt="ERROR" height="350px">
+                                <div class="overlay center-block">
+                                    <ul class="social_icon whitebg">
+                                        <div class="imageadjust">
+                                            <li>
+                                                <p>
+                                                <h2>Sandeep Kumar</h2>
+                                                </p>
+                                            </li><br>
+                                            <li>
+                                                <h3>Air Rank:-24</h3>
+                                            </li><br>
+                                            <li>
+                                                <h3>Hall:-Patel Hall </h3>
+                                            </li><br>
+                                            <li>
+                                                <h4>Department:-Mathematics and Computing</h4>
+                                            </li><br>
+                                            <li>
+                                                <h4>Batch:-2019</h4>
+                                            </li>
+                                        </div><br>
+
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- <div class="team-content darkcolor">
                             <h3>Crypcs Starks.</h3>
                             <p class="nomargin">CEO, The webox Company</p>
                         </div>-->
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <!-- Team ends -->
+        </section>
+        <!-- Team ends -->
 
-    <!-- News-->
-    <section id="newsfeed" class="padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 wow fadeIn text-center" data-wow-delay="300ms">
-                    <h2 class="heading heading_space darkcolor" style="color: black;"><span>Latest</span> Articles <span class="divider-center"></span></h2>
+        <!-- News-->
+        <section id="newsfeed" class="padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 wow fadeIn text-center" data-wow-delay="300ms">
+                        <h2 class="heading heading_space darkcolor" style="color: black;"><span>Latest</span> Articles
+                            <span class="divider-center"></span>
+                        </h2>
+                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="slider_wrapper">
-                        <div id="news_slider" class="owl-carousel">
-                            <div class="item">
-                                <div class="news_wrap">
-                                    <a class="image" href="blog_detail.html">
-                           <img src="" alt="Webox">
-                         </a>
-                                    <div class="news_box">
-                                        <h4 class="darkcolor font-light2"><a href="blog_detail.html">4 Springtime Color Schemes to Try at Home</a></h4>
-                                        <ul class="commment">
-                                            <li><a href="javascript:void(0)"><i class="fa fa-calendar"></i>Jun 6</a></li>
-                                            <li><a href="javascript:void(0)"><i class="fa fa-comments-o"></i> 9</a></li>
-                                            <li><a href="javascript:void(0)"><i class="fa fa-user"></i> emorson</a></li>
-                                        </ul>
-                                        <p>We offer the most complete house Services in the country...</p>
-                                        <a href="..\public\UCC_Blog.html" class="readmore">Read More</a>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="slider_wrapper">
+                            <div id="news_slider" class="owl-carousel">
+                                <div class="item">
+                                    <div class="news_wrap">
+                                        <a class="image" href="blog_detail.html">
+                                            <img src="" alt="Webox">
+                                        </a>
+                                        <div class="news_box">
+                                            <h4 class="darkcolor font-light2"><a href="blog_detail.html">4 Springtime
+                                                    Color Schemes to Try at Home</a></h4>
+                                            <ul class="commment">
+                                                <li><a href="javascript:void(0)"><i class="fa fa-calendar"></i>Jun 6</a>
+                                                </li>
+                                                <li><a href="javascript:void(0)"><i class="fa fa-comments-o"></i> 9</a>
+                                                </li>
+                                                <li><a href="javascript:void(0)"><i class="fa fa-user"></i> emorson</a>
+                                                </li>
+                                            </ul>
+                                            <p>We offer the most complete house Services in the country...</p>
+                                            <a href="..\public\UCC_Blog.html" class="readmore">Read More</a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="item">
-                                <div class="news_wrap">
-                                    <div class="image">
-                                        <img src="images/blog2.jpg" alt="Webox">
-                                    </div>
-                                    <div class="news_box">
-                                        <h4 class="darkcolor font-light2"><a href="blog_detail.html"> Springtime Color Schemes to Try at Home</a></h4>
-                                        <ul class="commment">
-                                            <li><a href="javascript:void(0)"><i class="fa fa-calendar"></i>Jun 6</a></li>
-                                            <li><a href="javascript:void(0)"><i class="fa fa-comments-o"></i> 9</a></li>
-                                            <li><a href="javascript:void(0)"><i class="fa fa-user"></i> emorson</a></li>
-                                        </ul>
-                                        <p>We offer the most complete house Services in the country...</p>
-                                        <a href="blog_detail.html" class="readmore">Read More</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="news_wrap">
-                                    <div class="image">
-                                        <img src="images/blog3.jpg" alt="Webox">
-                                    </div>
-                                    <div class="news_box">
-                                        <h4 class="darkcolor font-light2"><a href="blog_detail.html">4 Springtime Color Schemes to Try at Home</a></h4>
-                                        <ul class="commment">
-                                            <li><a href="javascript:void(0)"><i class="fa fa-calendar"></i>Jun 6</a></li>
-                                            <li><a href="javascript:void(0)"><i class="fa fa-comments-o"></i> 9</a></li>
-                                            <li><a href="javascript:void(0)"><i class="fa fa-user"></i> emorson</a></li>
-                                        </ul>
-                                        <p>We offer the most complete house Services in the country...</p>
-                                        <a href="blog_detail.html" class="readmore">Read More</a>
+                                <div class="item">
+                                    <div class="news_wrap">
+                                        <div class="image">
+                                            <img src="images/blog2.jpg" alt="Webox">
+                                        </div>
+                                        <div class="news_box">
+                                            <h4 class="darkcolor font-light2"><a href="blog_detail.html"> Springtime
+                                                    Color Schemes to Try at Home</a></h4>
+                                            <ul class="commment">
+                                                <li><a href="javascript:void(0)"><i class="fa fa-calendar"></i>Jun 6</a>
+                                                </li>
+                                                <li><a href="javascript:void(0)"><i class="fa fa-comments-o"></i> 9</a>
+                                                </li>
+                                                <li><a href="javascript:void(0)"><i class="fa fa-user"></i> emorson</a>
+                                                </li>
+                                            </ul>
+                                            <p>We offer the most complete house Services in the country...</p>
+                                            <a href="blog_detail.html" class="readmore">Read More</a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="item">
-                                <div class="news_wrap">
-                                    <div class="image">
-                                        <img src="images/blog1.jpg" alt="Webox">
-                                    </div>
-                                    <div class="news_box">
-                                        <h4 class="darkcolor font-light2"><a href="blog_detail.html">4 Springtime Color Schemes to Try at Home</a></h4>
-                                        <ul class="commment">
-                                            <li><a href="javascript:void(0)"><i class="fa fa-calendar"></i>Jun 6</a></li>
-                                            <li><a href="javascript:void(0)"><i class="fa fa-comments-o"></i> 9</a></li>
-                                            <li><a href="javascript:void(0)"><i class="fa fa-user"></i> emorson</a></li>
-                                        </ul>
-                                        <p>We offer the most complete house Services in the country...</p>
-                                        <a href="blog_detail.html" class="readmore">Read More</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="news_wrap">
-                                    <div class="image">
-                                        <img src="images/blog2.jpg" alt="Webox">
-                                    </div>
-                                    <div class="news_box">
-                                        <h4 class="darkcolor font-light2"><a href="blog_detail.html">4 Springtime Color Schemes to Try at Home</a></h4>
-                                        <ul class="commment">
-                                            <li><a href="javascript:void(0)"><i class="fa fa-calendar"></i>Jun 6</a></li>
-                                            <li><a href="javascript:void(0)"><i class="fa fa-comments-o"></i> 9</a></li>
-                                            <li><a href="javascript:void(0)"><i class="fa fa-user"></i> emorson</a></li>
-                                        </ul>
-                                        <p>We offer the most complete house Services in the country...</p>
-                                        <a href="blog_detail.html" class="readmore">Read More</a>
+                                <div class="item">
+                                    <div class="news_wrap">
+                                        <div class="image">
+                                            <img src="images/blog3.jpg" alt="Webox">
+                                        </div>
+                                        <div class="news_box">
+                                            <h4 class="darkcolor font-light2"><a href="blog_detail.html">4 Springtime
+                                                    Color Schemes to Try at Home</a></h4>
+                                            <ul class="commment">
+                                                <li><a href="javascript:void(0)"><i class="fa fa-calendar"></i>Jun 6</a>
+                                                </li>
+                                                <li><a href="javascript:void(0)"><i class="fa fa-comments-o"></i> 9</a>
+                                                </li>
+                                                <li><a href="javascript:void(0)"><i class="fa fa-user"></i> emorson</a>
+                                                </li>
+                                            </ul>
+                                            <p>We offer the most complete house Services in the country...</p>
+                                            <a href="blog_detail.html" class="readmore">Read More</a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="item">
-                                <div class="news_wrap">
-                                    <div class="image">
-                                        <img src="images/blog3.jpg" alt="Webox">
+                                <div class="item">
+                                    <div class="news_wrap">
+                                        <div class="image">
+                                            <img src="images/blog1.jpg" alt="Webox">
+                                        </div>
+                                        <div class="news_box">
+                                            <h4 class="darkcolor font-light2"><a href="blog_detail.html">4 Springtime
+                                                    Color Schemes to Try at Home</a></h4>
+                                            <ul class="commment">
+                                                <li><a href="javascript:void(0)"><i class="fa fa-calendar"></i>Jun 6</a>
+                                                </li>
+                                                <li><a href="javascript:void(0)"><i class="fa fa-comments-o"></i> 9</a>
+                                                </li>
+                                                <li><a href="javascript:void(0)"><i class="fa fa-user"></i> emorson</a>
+                                                </li>
+                                            </ul>
+                                            <p>We offer the most complete house Services in the country...</p>
+                                            <a href="blog_detail.html" class="readmore">Read More</a>
+                                        </div>
                                     </div>
-                                    <div class="news_box">
-                                        <h4 class="darkcolor font-light2"><a href="blog_detail.html">4 Springtime Color Schemes to Try at Home</a></h4>
-                                        <ul class="commment">
-                                            <li><a href="javascript:void(0)"><i class="fa fa-calendar"></i>Jun 6</a></li>
-                                            <li><a href="javascript:void(0)"><i class="fa fa-comments-o"></i> 9</a></li>
-                                            <li><a href="javascript:void(0)"><i class="fa fa-user"></i> emorson</a></li>
-                                        </ul>
-                                        <p>We offer the most complete house Services in the country...</p>
-                                        <a href="blog_detail.html" class="readmore">Read More</a>
+                                </div>
+                                <div class="item">
+                                    <div class="news_wrap">
+                                        <div class="image">
+                                            <img src="images/blog2.jpg" alt="Webox">
+                                        </div>
+                                        <div class="news_box">
+                                            <h4 class="darkcolor font-light2"><a href="blog_detail.html">4 Springtime
+                                                    Color Schemes to Try at Home</a></h4>
+                                            <ul class="commment">
+                                                <li><a href="javascript:void(0)"><i class="fa fa-calendar"></i>Jun 6</a>
+                                                </li>
+                                                <li><a href="javascript:void(0)"><i class="fa fa-comments-o"></i> 9</a>
+                                                </li>
+                                                <li><a href="javascript:void(0)"><i class="fa fa-user"></i> emorson</a>
+                                                </li>
+                                            </ul>
+                                            <p>We offer the most complete house Services in the country...</p>
+                                            <a href="blog_detail.html" class="readmore">Read More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="news_wrap">
+                                        <div class="image">
+                                            <img src="images/blog3.jpg" alt="Webox">
+                                        </div>
+                                        <div class="news_box">
+                                            <h4 class="darkcolor font-light2"><a href="blog_detail.html">4 Springtime
+                                                    Color Schemes to Try at Home</a></h4>
+                                            <ul class="commment">
+                                                <li><a href="javascript:void(0)"><i class="fa fa-calendar"></i>Jun 6</a>
+                                                </li>
+                                                <li><a href="javascript:void(0)"><i class="fa fa-comments-o"></i> 9</a>
+                                                </li>
+                                                <li><a href="javascript:void(0)"><i class="fa fa-user"></i> emorson</a>
+                                                </li>
+                                            </ul>
+                                            <p>We offer the most complete house Services in the country...</p>
+                                            <a href="blog_detail.html" class="readmore">Read More</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -610,157 +794,108 @@
                     </div>
                 </div>
             </div>
+        </section>
+        <!-- sponsors start -->
+        <div class="demo-row">
+            <div class="container" id="id-sponsors">
+                <div class="text-center">
+                    <h2 style="margin:20px 0;color:#fff;">Platinum Sponsors</h2>
+                </div>
+                <div id="sponsor-carousel" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                    </ol>
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner" role="listbox">
+                        <div class="item active">
+                            <div class="row">
+                                <div class="col-sm-3 col-xs-6">
+                                    <div class="sponsor-feature"><img alt=""
+                                            src="image/festamarketing.jpg"
+                                            style="width: 200px; height: 140px;" /></div>
+                                </div>
+                                <div class="col-sm-3 col-xs-6">
+                                    <div class="sponsor-feature"><img alt=""
+                                            src="image/sscore.jpg"
+                                            style="width: 155px;" /></div>
+                                </div>
+                                <div class="col-sm-3 col-xs-6">
+                                    <div class="sponsor-feature"><img alt=""
+                                            src="https://i1.wp.com/opportunitycell.com/wp-content/uploads/2022/07/PW.jpg?fit=1500%2C1000&ssl=1"
+                                            style="width: 200px;" /></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </section>
-    <!--News Ends-->   
-    <footer class="text-center text-lg-start text-white" style="background-color: #1c2331" >
-<!-- Section: Social media -->
-<section class="d-flex justify-content-between p-4" style="background-color: #6351ce" >
-<!-- Left -->
-<div class="me-5">
-  <span>Get connected with us on social networks:</span>
-</div>
-<!-- Left -->
 
-<!-- Right -->
-<div>
-  <a href="" class="text-white me-4">
-    <i class="fa fa-facebook-f"></i>
-  </a>
-  <a href="" class="text-white me-4">
-    <i class="fa fa-twitter"></i>
-  </a>
-  <a href="" class="text-white me-4">
-    <i class="fa fa-google"></i>
-  </a>
-  <a href="" class="text-white me-4">
-    <i class="fa fa-instagram"></i>
-  </a>
-  <a href="" class="text-white me-4">
-    <i class="fa fa-linkedin"></i>
-  </a>
-  <a href="" class="text-white me-4">
-    <i class="fa fa-github"></i>
-  </a>
-</div>
-<!-- Right -->
-</section>
-<!-- Section: Social media -->
+        <!-- sponsors ends -->
+        <!--News Ends-->
+        <!--Footer Starts-->
+        <section id="contacts">
+            <footer class="s-footer footer">
+                <div class="row footer__bottom">
+                    <div class="col-five tab-full">
+                        <div class="footer__logo">
+                            <a href="../index.html">
+                                <img src="../images/logo.png" alt="Homepage">
+                            </a>
+                        </div>
+                        <p>
+                            Location : IIT Kharagpur, Kharagpur, WB, India
+                        </p>
+                        <ul class="footer__social">
+                            <li> <a href="https://www.facebook.com/civilservicesclub.iitkgp/" target="_blank"><i
+                                        class="fa-brands fa-facebook" aria-hidden="true"></i></a></li>
+                            <li> <a href="https://www.instagram.com/civilservicesclub.iitkgp/reels/" target="_blank"><i
+                                        class="fa-brands fa-instagram" aria-hidden="true"></i></a></li>
+                            <li> <a href="https://www.youtube.com/@civilservicesclub.iitkgp" target="_blank"><i
+                                        class="fa-brands fa-youtube" aria-hidden="true"></i></a></li>
+                            <li> <a href="https://www.linkedin.com/company/civil-services-club-iitkgp"
+                                    target="_blank"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="col-six tab-full end">
+                        <ul class="footer__site-links">
+                            <li class="current" class="smoothscroll"><a href="index.html" title="intro">Home</a></li>
+                            <li class="current" class="smoothscroll"><a href="about.html" title="intro">About</a></li>
+                            <li class="current" class="smoothscroll"><a href="Faqs.html" title="intro">FAQS</a></li>
+                            <li class="current" class="smoothscroll"><a href="team.html" title="intro">Team</a></li>
 
-<!-- Section: Links  -->
-<section class="">
-<div class="container text-center text-md-start mt-5">
-  <!-- Grid row -->
-  <div class="row mt-3">
-    <!-- Grid column -->
-    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-      <!-- Content -->
-      <h6 class="text-uppercase fw-bold">Company name</h6>
-      <hr
-          class="mb-4 mt-0 d-inline-block mx-auto"
-          style="width: 60px; background-color: #7c4dff; height: 2px"
-          />
-      <p>
-        Here you can use rows and columns to organize your footer
-        content. Lorem ipsum dolor sit amet, consectetur adipisicing
-        elit.
-      </p>
+                        </ul>
+                        <p class="footer__contact">
+                            Do you have a question? Send us a word: <br>
+                            <a href="civilservicesclub.iitkgp@gmail.com" class="footer__mail-link"><span
+                                    class="__cf_email__">civilservicesclub.iitkgp@gmail.com</span></a>
+                        </p>
+                    </div>
+                </div>
+                <div class="go-top">
+                    <a class="smoothscroll" title="Back to Top" href="#top"></a>
+                </div>
+            </footer>
+        </section>
+        <!-- Footer -->
     </div>
-    <!-- Grid column -->
 
-    <!-- Grid column -->
-    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-      <!-- Links -->
-      <h6 class="text-uppercase fw-bold">Products</h6>
-      <hr
-          class="mb-4 mt-0 d-inline-block mx-auto"
-          style="width: 60px; background-color: #7c4dff; height: 2px"
-          />
-      <p>
-        <a href="#!" class="text-white">MDBootstrap</a>
-      </p>
-      <p>
-        <a href="#!" class="text-white">MDWordPress</a>
-      </p>
-      <p>
-        <a href="#!" class="text-white">BrandFlow</a>
-      </p>
-      <p>
-        <a href="#!" class="text-white">Bootstrap Angular</a>
-      </p>
-    </div>
-    <!-- Grid column -->
 
-    <!-- Grid column -->
-    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-      <!-- Links -->
-      <h6 class="text-uppercase fw-bold">Useful links</h6>
-      <hr
-          class="mb-4 mt-0 d-inline-block mx-auto"
-          style="width: 60px; background-color: #7c4dff; height: 2px"
-          />
-      <p>
-        <a href="#!" class="text-white">Your Account</a>
-      </p>
-      <p>
-        <a href="#!" class="text-white">Become an Affiliate</a>
-      </p>
-      <p>
-        <a href="#!" class="text-white">Shipping Rates</a>
-      </p>
-      <p>
-        <a href="#!" class="text-white">Help</a>
-      </p>
-    </div>
-    <!-- Grid column -->
+    <!-- End of .container -->
 
-    <!-- Grid column -->
-    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-      <!-- Links -->
-      <h6 class="text-uppercase fw-bold">Contact</h6>
-      <hr
-          class="mb-4 mt-0 d-inline-block mx-auto"
-          style="width: 60px; background-color: #7c4dff; height: 2px"
-          />
-      <p><i class="fa fa-home mr-3"></i> New York, NY 10012, US</p>
-      <p><i class="fa fa-envelope mr-3"></i> info@example.com</p>
-      <p><i class="fa fa-phone mr-3"></i> + 01 234 567 88</p>
-      <p><i class="fa fa-print mr-3"></i> + 01 234 567 89</p>
-    </div>
-    <!-- Grid column -->
-  </div>
-  <!-- Grid row -->
-</div>
-</section>
-<!-- Section: Links  -->
-
-<!-- Copyright -->
-<div
-   class="text-center p-3"
-   style="background-color: rgba(0, 0, 0, 0.2)"
-   >
-© 2020 Copyright:
-<a class="text-white" href="https://mdbootstrap.com/"
-   >MDBootstrap.com</a
-  >
-</div>
-<!-- Copyright -->
-</footer>
-<!-- Footer -->
-
-</div>
-<!-- End of .container --> 
-
-        <!-- Detailed info 
+    <!-- Detailed info 
          
         <div class="container few-words">
             <div class="row">-->
-                <!-- First column 
+    <!-- First column 
                 <div class="col col-heading">-->
-                    <!-- Detailed info 
+    <!-- Detailed info 
                     <h2>A few words about our awesome company!</h2>-->
 
-                    <!-- Social icons 
+    <!-- Social icons 
                     <div class="social">
                         <a href="" class="social-icon">
 							<i class="fa fa-twitter fa-lg"></i>
@@ -775,18 +910,18 @@
 							<i class="fa fa-instagram fa-lg"></i>
 						</a>
                     </div>-->
-                    <!-- Social icons block end 
+    <!-- Social icons block end 
                 </div>-->
-                <!-- First column end -->
+    <!-- First column end -->
 
-                <!-- Second column 
+    <!-- Second column 
                 <div class="col col-content">
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                         Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt.</p>
                 </div>-->
-                <!-- Second column end -->
+    <!-- Second column end -->
 
-                <!-- Third column 
+    <!-- Third column 
                 <div class="col col-contacts">
                     <h3>Contact us</h3>
                     <div class="contact">
@@ -802,12 +937,12 @@
                         <span class="value">Malczewkiego&nbsp;7/50, 80107&nbsp;Gdansk, Poland</span>
                     </div>
                 </div>-->
-                <!-- Third column end 
+    <!-- Third column end 
             </div>
         </div>  -->
-        <!-- Detailed info block end -->
+    <!-- Detailed info block end -->
 
-        <!-- Send me an email when it's done
+    <!-- Send me an email when it's done
         <div class="notify-by-email">
             <div class="container">
                 <div class="row">
@@ -815,7 +950,7 @@
                         <h3>Send me an email when&nbsp;it's done!</h3>
                     </div>
                     <div class="col col-two-thirds"> -->
-                        <!-- Subscribe form 
+    <!-- Subscribe form 
                         <form action="notify-me.php" id="notifyMe" method="POST">
                             <input type="text" name="email" placeholder="Your e-mail address" />
                             <button>Send</button>
@@ -826,20 +961,20 @@
                 </div>
             </div>
         </div> -->
-        <!-- Send me an email when it's done block end	 -->
+    <!-- Send me an email when it's done block end	 -->
 
 
-        <!-- Footer 
+    <!-- Footer 
         <div class="footer">
             <div class="container">
                 
                 <p>&copy2023 Hariom & Tech Team | All Rights Reserved</p>
                 
             </div>
-        </div>--> 
-       <!-- <iframe src="footer.html" width="100%" height="400px" style="border: none;
+        </div>-->
+    <!-- <iframe src="footer.html" width="100%" height="400px" style="border: none;
         outline: none;"></iframe> -->
-         
+
 
     <!-- JavaScripts -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
@@ -899,7 +1034,7 @@
     <script src="js/notifyMe.js"></script>
 
     <script type="text/javascript">
-        $().ready(function() {
+        $().ready(function () {
 
             // Activate countdownTimer plugin on a '.countdown' element
             $(".countdown").countdownTimer({
@@ -933,8 +1068,8 @@
             });
 
             // Add handler on 'Scroll down to learn more' link
-            $().ready(function() {
-                $(".overlap .more").click(function(e) {
+            $().ready(function () {
+                $(".overlap .more").click(function (e) {
                     e.preventDefault();
                     $("body,html").animate({
                         scrollTop: $(window).height()
@@ -945,39 +1080,45 @@
 
         });
     </script>
-     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-     <script>
-       AOS.init();
-     </script>
-     <script>
-         // Get the button element and the modal element
-const openModalBtn = document.getElementById('openModalBtn');
-const videoModal = document.getElementById('videoModal');
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script>
+        // Get the button element and the modal element
+        const openModalBtn = document.getElementById('openModalBtn');
+        const videoModal = document.getElementById('videoModal');
 
-// Get the close button element inside the modal
-const closeBtn = videoModal.querySelector('.close-btn');
+        // Get the close button element inside the modal
+        const closeBtn = videoModal.querySelector('.close-btn');
 
-// Function to open the modal
-function openModal() {
-  videoModal.style.display = 'block';
-}
+        // Function to open the modal
+        function openModal() {
+            videoModal.style.display = 'block';
+        }
 
-// Function to close the modal
-function closeModal() {
-  videoModal.style.display = 'none';
-}
+        // Function to close the modal
+        function closeModal() {
+            videoModal.style.display = 'none';
+        }
 
-// Event listeners to trigger modal open/close
-openModalBtn.addEventListener('click', openModal);
-closeBtn.addEventListener('click', closeModal);
+        // Event listeners to trigger modal open/close
+        openModalBtn.addEventListener('click', openModal);
+        closeBtn.addEventListener('click', closeModal);
 
-// Close the modal if the user clicks outside of the modal content
-window.addEventListener('click', (event) => {
-  if (event.target === videoModal) {
-    closeModal();
-  }
-});
-     </script>
+        // Close the modal if the user clicks outside of the modal content
+        window.addEventListener('click', (event) => {
+            if (event.target === videoModal) {
+                closeModal();
+            }
+        });
+    </script>
+    <script>
+        $('#sponsor-carousel').carousel({
+            interval: 3000,
+            cycle: true
+        }); 
+    </script>
 </body>
 
 </html>

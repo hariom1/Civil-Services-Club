@@ -366,7 +366,8 @@ textarea {
 
 [class*="col-"] {
     float: left;
-    padding: 0 20px
+    margin-left: 48px;
+    padding: 2px 21px;
 }
 
 [class*="col-"]+[class*="col-"].end {
@@ -3881,7 +3882,7 @@ html.cl-loaded .home-content__main {
 }
 
 .s-footer {
-    padding-bottom: 12rem;
+    padding-bottom: 3rem;
     color: rgba(255, 255, 255, .4);
     position: relative
 }
@@ -4070,7 +4071,8 @@ html.cl-loaded .home-content__main {
 .footer__site-links li a,
 .footer__site-links li a:visited {
     color: #fff;
-    outline: none
+    outline: none;
+    font-size: 20px;
 }
 
 .footer__site-links li a:hover,
@@ -4084,7 +4086,7 @@ html.cl-loaded .home-content__main {
 
 .footer__contact .footer__mail-link {
     font-weight: 600;
-    font-size: 2.2rem;
+    font-size: 1.9rem;
     line-height: 1.455;
     color: #2576FD;
 }

@@ -138,10 +138,10 @@ h2 {
 h2:before {
     content: ' ';
     display: block;
-    width: 60px;
+    width: 176px;
     border-bottom: 5px solid #f2ebeb;
     position: absolute;
-    margin: -25px 0 0 0
+    margin: -25px 460px 0;
 }
 
 h3 {
@@ -624,7 +624,7 @@ body {
 }
 
 .footer {
-    position: absolute;
+    /* position: absolute; */
     bottom: 0;
     left: 0;
     right: 0;
