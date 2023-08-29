@@ -249,8 +249,8 @@ button {
 
 img,
 video {
-    max-width: 100%;
-    height: auto
+    max-width: 86%;
+    height: 400px;
 }
 
 div,

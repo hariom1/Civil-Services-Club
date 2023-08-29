@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel='stylesheet' href='styles.css'>
+    <meta charset='UTF-8'>
+    <title>Original Drums</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 360px;
+  margin: 0 0;
+  font-family: 'Poppins', sans-serif;
+  color: #333333;
+  background-color: #F7F7F7;
+}
+
+
+.nav-link:hover {
+  border-color: #333333ff;
+  transition: border-color 0.6s ease-out;
+}
+
+section {
+  display: block;
+}
+
+
+@media (max-width: 800px) {
+  main {
+    margin-top: 200px;
+    background-attachment: fixed;
+    background-size: cover;
+    border-radius: 100px 100px 0 0;
+  }
+}
+
+.whitebg {
+  margin: 0 0;
+  background-color: #F7F7F7;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* HEADER */
+
+header {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #F7F7F7;
+  justify-content: space-between;
+  width: 100%;
+}
+
+header img {
+  padding-left: 1em;
+  height: 80px;
+  width: 80px;
+}
+
+header div {
+  width: cover;
+  display: flex;
+  align-items: center;
+}
+
+header nav {
+  display: flex;
+  width: cover;
+  justify-content: flex-end;
+  padding-right: 30px;
+}
+
+header nav ul {
+  display: flex;
+  width: 35vw;
+  justify-content: space-around;
+}
+
+nav li {
+  align-items: center;
+  width: cover;
+  display: flex;
+}
+
+a {
+  text-decoration: none;
+  color: #333333;
+  padding-bottom: 5px;
+  border-bottom: 3px solid #33333300;
+}
+
+@media (max-width: 800px) {
+
+  header {
+    min-width: 360px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  header div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  header nav {
+    display: flex;
+    width: cover;
+    justify-content: space-around;
+  }
+
+  header nav ul {
+    display: flex;
+    width: 80vw;
+    justify-content: space-around;
+  }
+
+  nav li {
+    align-items: center;
+    width: 10vw;
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+/* TOP */
+
+.top {
+  height: 100vh;
+  text-align: center;
+  padding-bottom: 150px;
+  margin-top: 90px;
+  background: url('https://images.unsplash.com/photo-1504654034213-87ab9a78aa12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=871&q=80');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  border-radius: 100px 0 0 0;
+}
+
+.top h2 {
+  color: #F7F7F7;
+  font-size: 2em;
+  padding-top: 150px;
+}
+
+input[type='email'] {
+  display: block;
+  min-width: 20em;
+  height: 20px;
+  padding: 1em;
+  margin: 1em auto;
+  border: none;
+  border-radius: 5px;
+  color: #F7F7F7;
+  background-color: #15120d90;
+}
+
+.top input[type='submit'] {
+  font-family: 'Poppins', sans-serif;
+  display: block;
+  min-width: cover;
+  width: 10em;
+  height: 40px;
+  font-size: 1.1em;
+  margin: 1em auto;
+  color: #F7F7F7;
+  background-color: #fd832a;
+  border: none;
+  border-radius: 5px;
+}
+
+input[type='submit']:hover {
+  background-color: #fd632a;
+  transition: background-color 0.3s ease-out;
+}
+
+.price input[type='submit']:hover {
+  background-color: #fd632a;
+  transition: background-color 0.3s ease-out;
+}
+
+/* FEATURES */
+
+.features {
+  padding-top: 5em;
+}
+
+.feat {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  padding: 1em 1em;
+  align-items: center;
+}
+
+.feat img {
+  width: 50px;
+  height: 50px;
+  margin-right: 1em;
+}
+
+/* HOW IT WORKS */
+
+iframe {
+  display: block;
+  margin: 5em auto;
+  border-radius: 5px;
+}
+
+/* PRICING */
+
+.pricing {
+  display: flex;
+  justify-content: space-around;
+  background-size: 100%;
+  margin-bottom: 4em;
+}
+
+.price {
+  display: block;
+  text-align: center;
+  margin: 1em auto;
+  border: 1px solid;
+  border-radius: 10px;
+  width: 25%;
+  height: 20%;
+}
+
+.price h2 {
+  text-align: center;
+}
+
+.price h3 {
+  background: #dddddd;
+  border-radius: 10px 10px 0 0;
+  margin: 0 0;
+  padding: 1em;
+  text-align: center;
+}
+
+.price input[type='submit'] {
+  font-family: 'Poppins';
+  display: block;
+  margin: 1em auto;
+  width: 80%;
+  height: 40px;
+  font-size: 1.1em;
+  color: #F7F7F7;
+  background-color: #fd832a;
+  border: none;
+  border-radius: 5px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+@media (max-width: 800px) {
+  .pricing {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-bottom: 4em;
+  }
+
+  .price {
+    display: block;
+    border: 1px solid;
+    width: 80%;
+    height: 20%;
+    margin: 2em auto;
+  }
+}
+
+/* FOOTER */
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background: #3b3b4f;
+  color: #F7F7F7;
+}
+
+.footer p {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 2em;
+}
+
+.footer ul {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 2em;
+}
+
+.footer li {
+  display: flex;
+  justify-content: flex-end;
+  width: 10vw;
+}
+
+.footer a {
+  color: #F7F7F7;
+}
+
+@media (max-width: 800px) {
+  .footer li {
+    width: 20vw;
+  }
+}
+/* css for faq  page */
+
+body{
+    font-family: 'Work Sans', sans-serif;
+}
+.faq-heading{
+    border-bottom: #777;
+    padding: 20px 60px;
+}
+.faq-container{
+display: flex;
+justify-content: center;
+flex-direction: column;
+
+}
+.hr-line{
+  width: 60%;
+  margin: auto;
+}
+/* Style the buttons that are used to open and close the faq-page body */
+.faq-page {
+    /* background-color: #eee; */
+    color: #444;
+    cursor: pointer;
+    padding: 30px 20px;
+    width: 60%;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    margin: auto;
+
+}
+.faq-body{
+    margin: auto;
+    /* text-align: center; */
+   width: 50%; 
+   padding: auto;
+   
+}
+
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active,
+.faq-page:hover {
+    background-color: #F9F9F9;
+}
+
+/* Style the faq-page panel. Note: hidden by default */
+.faq-body {
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+}
+
+.faq-page:after {
+    content: '\02795';
+    /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+    content: "\2796";
+    /* Unicode character for "minus" sign (-) */
+}
+    </style>
+  </head>
+  <body>
+      <header id='header'>
+        <div class='logo'>
+          <img id='header-img' src='image/Screenshot_2023_0818_000931-removebg-preview.png' alt='logo'>
+          <h1>Civil Service Club</h1>
+        </div>
+        <nav id='nav-bar'>
+          <ul>
+            <li><a class="nav-link" href="#features">Features</a></li>
+            <li><a class="nav-link" href="#how-it-works">How It Works</a></li>
+            <li><a class="nav-link" href="#pricing">Pricing</a></li>
+          </ul>
+        </nav>
+      </header>
+    <main>
+      <section id='top' class='top'>
+        <h2>Handcrafted, home-made masterpieces</h2>
+        <form id='form' action='https://www.freecodecamp.com/email-submit'>
+          <input id='email' name='email' type='email' placeholder='Enter your email address' required>
+          <input id='submit' type='submit' value='Get Started'>
+        </form>
+      </section>
+      <div class='whitebg'>
+      <section id='features' class='features'>
+        <main>
+
+            <h1 class="faq-heading">FAQ'S</h1>
+            <section class="faq-container">
+                <div class="faq-one">
+    
+                    <!-- faq question -->
+                    <h1 class="faq-page">What is an FAQ Page?</h1>
+    
+                    <!-- faq answer -->
+                    <div class="faq-body">
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit saepe sequi, illum facere
+                            necessitatibus cum aliquam id illo omnis maxime, totam soluta voluptate amet ut sit ipsum
+                            aperiam.
+                            Perspiciatis, porro!</p>
+                    </div>
+                </div>
+                <hr class="hr-line">
+    
+                <div class="faq-two">
+    
+                    <!-- faq question -->
+                    <h1 class="faq-page">Why do you need an FAQ page?</h1>
+    
+                    <!-- faq answer -->
+    
+                    <div class="faq-body">
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit saepe sequi, illum facere
+                            necessitatibus cum aliquam id illo omnis maxime, totam soluta voluptate amet ut sit ipsum
+                            aperiam.
+                            Perspiciatis, porro!</p>
+                    </div>
+                </div>
+                <hr class="hr-line">
+    
+    
+                <div class="faq-three">
+    
+                    <!-- faq question -->
+                    <h1 class="faq-page">Does it improves the user experience of a website?</h1>
+    
+                    <!-- faq answer -->
+                    <div class="faq-body">
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit saepe sequi, illum facere
+                            necessitatibus cum aliquam id illo omnis maxime, totam soluta voluptate amet ut sit ipsum
+                            aperiam.
+                            Perspiciatis, porro!</p>
+                    </div>
+                </div>
+    
+            </section>
+        </main>
+      </section>
+      <section id='footer' class='footer'>
+          <ul>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Terms</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+          <p>Copyright 2019, Original Drums</p>
+        </section>
+        </div>
+    </main>
+    <script>
+        var faq = document.getElementsByClassName("faq-page");
+var i;
+
+for (i = 0; i < faq.length; i++) {
+    faq[i].addEventListener("click", function () {
+        /* Toggle between adding and removing the "active" class,
+        to highlight the button that controls the panel */
+        this.classList.toggle("active");
+
+        /* Toggle between hiding and showing the active panel */
+        var body = this.nextElementSibling;
+        if (body.style.display === "block") {
+            body.style.display = "none";
+        } else {
+            body.style.display = "block";
+        }
+    });
+}
+    </script>
+  </body>
+</html>
