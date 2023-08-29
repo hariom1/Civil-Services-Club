@@ -272,7 +272,7 @@ p,
 blockquote,
 th,
 td {
-    margin: 0;
+    margin: 0px 0px -9px 0px;
     padding: 0
 }
 
@@ -366,7 +366,7 @@ textarea {
 
 [class*="col-"] {
     float: left;
-    margin-left: 48px;
+    margin-left: 0px;
     padding: 2px 21px;
 }
 

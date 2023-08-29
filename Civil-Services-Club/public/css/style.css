@@ -281,30 +281,7 @@ p {
 
 /*heading Style*/
 
-.heading {
-    border-bottom: 1px solid #dadada;
-    display: inline-block;
-}
 
-.heading .divider-left,
-.heading .divider-center {
-    height: 4px;
-    width: 70px;
-    background: #b2cb20;
-    display: block;
-}
-
-.heading .divider-left {
-    margin: 10px 0 -2px;
-}
-
-.heading .divider-center {
-    margin: 10px auto -2px;
-}
-
-.heading>span {
-    font-weight: 200;
-}
 
 /*Align items center*/
 
