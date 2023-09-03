@@ -28,6 +28,8 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <script nonce="02f433e8-fab8-45d5-ad82-41726ecf65aa">
+
+
         (function (w, d) {
             !(function (a, e, t, r) {
                 a.zarazData = a.zarazData || {};
@@ -90,6 +92,133 @@
             })(w, d, 0, "script");
         })(window, document);
     </script>
+    <!-- dropdown css -->
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .faqs-container {
+            margin: 0 auto;
+            max-width: 600px;
+        }
+
+        .faq {
+            background-color: transparent;
+            border: 1px solid #9FA4A8;
+            border-radius: 10px;
+            padding: 30px;
+            position: relative;
+            overflow: hidden;
+            margin: 20px 0;
+            transition: 0.3s ease;
+        }
+
+        .faq.active {
+            background-color: #fff;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .faq.active::after,
+        .faq.active::before {
+            color: #2ecc71;
+            content: '\f075';
+            font-family: 'Font Awesome 5 Free';
+            font-size: 7rem;
+            position: absolute;
+            opacity: 0.2;
+            top: 20px;
+            left: 20px;
+            z-index: 0;
+        }
+
+        .faq.active::before {
+            color: #3498db;
+            top: -10px;
+            left: -30px;
+            transform: rotateY(180deg);
+        }
+
+        .faq-title {
+            margin: 0 35px 0 0;
+        }
+
+        .faq-text {
+            display: none;
+            margin: 30px 0 0;
+        }
+
+        .faq.active .faq-text {
+            display: block;
+        }
+
+        .faq-toggle {
+            background-color: transparent;
+            border: none;
+            border-radius: 50%;
+            color: #fff;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            padding: 0;
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            height: 30px;
+            width: 30px;
+        }
+
+        .faq-toggle:focus {
+            outline: none;
+        }
+
+        .faq.active .faq-toggle {
+            background-color: #9FA4A8;
+        }
+
+        .faq-toggle .fa-times {
+            display: none;
+        }
+
+        .faq.active .faq-toggle .fa-times {
+            display: block;
+        }
+
+        .faq-toggle .fa-chevron-down {
+            color: #83888E;
+        }
+
+        .faq.active .faq-toggle .fa-chevron-down {
+            display: none;
+        }
+    </style>
+    <script>
+        const toggles = document.querySelectorAll('.faq-toggle');
+
+        toggles.forEach(toggle => {
+            toggle.addEventListener('click', () => {
+                toggle.parentNode.classList.toggle('active');
+            });
+        });
+
+        // SOCIAL PANEL JS
+        const floating_btn = document.querySelector('.floating-btn');
+        const close_btn = document.querySelector('.close-btn');
+        const social_panel_container = document.querySelector('.social-panel-container');
+
+        floating_btn.addEventListener('click', () => {
+            social_panel_container.classList.toggle('visible')
+        });
+
+        close_btn.addEventListener('click', () => {
+            social_panel_container.classList.remove('visible')
+        });
+    </script>
+
 </head>
 <!--Start of the page-->
 
@@ -110,14 +239,14 @@
                 <li class="current"><a href="../blog.html" title="blog">Blog</a></li>
             </ul>
             <ul class="header-social">
-                <li> <a href="https://www.facebook.com/civilservicesclub.iitkgp/" target="_blank"><i class="fa-brands fa-facebook"
-                            aria-hidden="true"></i></a></li>
-                <li> <a href="https://www.instagram.com/civilservicesclub.iitkgp/reels/" target="_blank"><i class="fa-brands fa-instagram"
-                            aria-hidden="true"></i></a></li>
-                <li> <a href="https://www.youtube.com/@civilservicesclub.iitkgp" target="_blank"><i class="fa-brands fa-youtube"
-                            aria-hidden="true"></i></a></li>
-                <li> <a href="https://www.linkedin.com/company/civil-services-club-iitkgp" target="_blank"><i class="fa-brands fa-linkedin-in"
-                            aria-hidden="true"></i></a></li>
+                <li> <a href="https://www.facebook.com/civilservicesclub.iitkgp/" target="_blank"><i
+                            class="fa-brands fa-facebook" aria-hidden="true"></i></a></li>
+                <li> <a href="https://www.instagram.com/civilservicesclub.iitkgp/reels/" target="_blank"><i
+                            class="fa-brands fa-instagram" aria-hidden="true"></i></a></li>
+                <li> <a href="https://www.youtube.com/@civilservicesclub.iitkgp" target="_blank"><i
+                            class="fa-brands fa-youtube" aria-hidden="true"></i></a></li>
+                <li> <a href="https://www.linkedin.com/company/civil-services-club-iitkgp" target="_blank"><i
+                            class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a></li>
             </ul>
         </nav>
         <a class="header-menu-toggle" href="#"><span>Menu</span></a>
@@ -126,7 +255,8 @@
     <!--Article Starts-->
     <article class="blog-single">
         <!--Hero Section starts-->
-        <div class="page-header page-header--single" style="background-image: url(http://ummid.com/news/2018/September/01.09.2018/uniform-civil-code.jpg)">
+        <div class="page-header page-header--single"
+            style="background-image: url(http://ummid.com/news/2018/September/01.09.2018/uniform-civil-code.jpg)">
             <div class="row page-header__content">
                 <div class="col-full">
                     <h1 class="display-1">
@@ -156,24 +286,29 @@
                     </!--blockquote>
                     <p>Prime Minister Narendra Modi at the 2022 Bali G20 Summit in Indonesia. As India has taken the responsibility to preside over G20, let’s have a deeper look into it. 
                         <br /-->
-                    <h2>Introduction:</h2>
-                    <p>Uniform Civil Code(UCC) is a proposal in India that seeks to replace religious, customary, and
+                    <h2>Introduction</h2>
+                    <p><b><strong>Uniform Civil Code(UCC)</strong></b> is a proposal in India that seeks to replace
+                        religious, customary, and
                         traditional personal laws governing aspects such as marriage, divorce, inheritance, adoption,
                         and maintenance, with a single, inclusive law applicable to all individuals regardless of their
                         religion, caste, creed, sexual orientation, and gender.<br> <br>
 
-                        It was included in Article 44 among the Directive Principles of State Policy, stating that "the
+                        It was included in <a
+                            href="https://www.lawteacher.net/free-law-essays/constitutional-law/article-44-of-the-constitution-of-india-constitutional-law-essay.php"><i>Article
+                                44 </i></a>among the Directive Principles of State Policy, stating that "the
                         State shall endeavor to secure for the citizens a uniform civil code throughout the territory of
-                        India". Directive Principles are not enforceable by the court. They inform and guide the
+                        India".<i><strong> Directive Principles</strong></i> are not enforceable by the court. They
+                        inform and guide the
                         government.<br> <br>
 
-                        In this article, we have tried our best to give an overview of UCC and give an unbiased opinion
+                        In this article, we have tried our best to give an overview of <strong>UCC </strong>and give an
+                        unbiased opinion
                         on the matter along with some suggestions and practical problems addressing it.<br>
 
                     </p>
 
 
-                    <h2>1)Historical Context:</h2>
+                    <h2>Historical Context:-</h2>
                     As we have surged ahead with socio-economic and technological developments in society, with thriving
                     civilization and evolving human mind, there were conflicts that arose among people and hence the
                     void of a common set of rules was felt that could bring harmony to the society. We are primarily
@@ -183,27 +318,55 @@
 
                     We see different cultural systems practices and morals that prevailed across the globe at different
                     times and religion flourished as an inseparable entity along with society and played a crucial role
-                    in setting up rules and regulations. There are verses in the ancient religious texts like Vedas,
-                    Smritis, Quran, Torah, and the Bible that primarily deal with spiritual and metaphysical subjects
+                    in setting up rules and regulations. There are verses in the ancient religious texts like
+                    <strong>Vedas,
+                        Smritis, Quran, Torah, and the Bible </strong>that primarily deal with spiritual and
+                    metaphysical subjects
                     but they also contain valuable insights and guidance that can be applied to civil matters from Legal
                     Principles, Social Order, Dispute Resolution to Property rights and social welfare.<br><br>
 
-                    After, the battle of Plassey (1757) and the battle of Buksar (1764), the East India Company rose to
+                    After, <i>the battle of Plassey </i>(1757) and <i>the battle of Buksar</i> (1764), the East India
+                    Company rose to
                     power and influenced not only the trade and revenue but also the administrative law and order of the
-                    nation. Many civil matters were reformed that includes the Abolition of Sati, the Caste Disability
-                    Act (1850), the Hindu Widow Remarriage Act (1856), the Special Marriage Act (1873), the Married
-                    Women Property Act (1874), the Age of Consent Act (1891), the Child Marriage Restraint Act
-                    (1929-30), the Deshmukh Act (1937), Dissolution of Muslim Marriage Act (1939) are remarkable reforms
+                    nation. Many civil matters were reformed that includes <i><strong><a
+                                href="https://en.wikipedia.org/wiki/Sati_(practice)">the Abolition of
+                                Sati</a></strong></i>, <i><strong><a
+                                href="https://en.wikipedia.org/wiki/Caste_Disabilities_Removal_Act,_1850">the Caste
+                                Disability
+                                Act</a></strong></i> (1850), <i><strong><a
+                                href="https://en.wikipedia.org/wiki/Hindu_Widows%27_Remarriage_Act,_1856">the Hindu
+                                Widow Remarriage Act</a></strong></i> (1856),<i><strong><a
+                                href="https://en.wikipedia.org/wiki/Special_Marriage_Act,_1954"> the Special Marriage
+                                Act </a></strong></i>(1873), <i><strong><a
+                                href="https://en.wikipedia.org/wiki/Married_Women%27s_Property_Act_1882">the Married
+                                Women Property Act</a></strong></i> (1874),<i><strong><a
+                                href="https://en.wikipedia.org/wiki/Age_of_Consent_Act,_1891"></a></strong></i> the Age
+                    of Consent Act (1891),<i><strong><a
+                                href="https://r.search.yahoo.com/_ylt=AwrPrpcadPRk_0c5SQi7HAx.;_ylu=Y29sbwNzZzMEcG9zAzEEdnRpZAMEc2VjA3Ny/RV=2/RE=1693770907/RO=10/RU=https%3a%2f%2fen.wikipedia.org%2fwiki%2fChild_Marriage_Restraint_Act/RK=2/RS=cWvAV8HIu_Q4xtFLHcOxaf3WICk-">
+                                the Child Marriage Restraint Act</a></strong></i>
+                    (1929-30), <i><strong><a href="https://en.wikipedia.org/wiki/Durgabai_Deshmukh">the Deshmukh
+                                Act</a></strong></i> (1937),<i><strong><a
+                                href="https://r.search.yahoo.com/_ylt=AwrKBHGFdPRkxzw5_By7HAx.;_ylu=Y29sbwNzZzMEcG9zAzEEdnRpZAMEc2VjA3Ny/RV=2/RE=1693771014/RO=10/RU=https%3a%2f%2fen.wikipedia.org%2fwiki%2fDissolution_of_Muslim_Marriages_Act%2c_1939/RK=2/RS=1yKephDm1QXek_tR_9s9z7xUgIE-">Dissolution
+                                of Muslim Marriage Act</a></strong></i> (1939) are remarkable reforms
                     that were carried under the British regime involving both Indian and British reformers.<br><br>
 
                     Post-independence, the Hindu code bill was a matter of great discussion as it preached uniformity
                     over the practices of the Hindus(persons who are not Muslims, Jews, Christians, or Persians). It was
-                    the first step towards achieving uniformity irrespective of caste and customs. Firstly, the Hindu
-                    Marriage Act (1955) was implemented. The Hindu succession act (1956) allowed women to uphold
-                    property as their absolute right. Then followed The Hindu Minority and Guardianship Act (1956) and
-                    Hindu Adoption and Maintenance Act (1956).<br><br>
+                    the first step towards achieving uniformity irrespective of caste and customs. Firstly,
+                    the<i><strong><a
+                                href="https://r.search.yahoo.com/_ylt=Awr1TcZbdfRkoJM3Tae7HAx.;_ylu=Y29sbwNzZzMEcG9zAzEEdnRpZAMEc2VjA3Ny/RV=2/RE=1693771227/RO=10/RU=https%3a%2f%2fen.wikipedia.org%2fwiki%2fHindu_Marriage_Act%2c_1955/RK=2/RS=bczmHbmpT5nEmAJxaiyxHS2LIkM-">Hindu
+                                Marriage Act </a></strong></i> (1955) was implemented. The <i><strong><a
+                                href="https://r.search.yahoo.com/_ylt=AwrKGFx3dfRkBn43nUW7HAx.;_ylu=Y29sbwNzZzMEcG9zAzEEdnRpZAMEc2VjA3Ny/RV=2/RE=1693771255/RO=10/RU=https%3a%2f%2fen.wikipedia.org%2fwiki%2fHindu_Succession_Act%2c_1956/RK=2/RS=NywoVlkm1M5LOKpR053Hgy_WccQ-">Hindu
+                                succession act</a></strong></i> (1956) allowed women to uphold
+                    property as their absolute right. Then followed The<i><strong><a
+                                href="https://r.search.yahoo.com/_ylt=AwrKB0OudfRkNho40h.7HAx.;_ylu=Y29sbwNzZzMEcG9zAzEEdnRpZAMEc2VjA3Ny/RV=2/RE=1693771311/RO=10/RU=https%3a%2f%2fen.wikipedia.org%2fwiki%2fHindu_Minority_and_Guardianship_Act%2c_1956/RK=2/RS=_pZeU_UUWMFL3Kx4b_kZpGLLI7E-">Hindu
+                                Minority and Guardianship Act</a></strong></i> (1956) and<i><strong><a
+                                href="https://r.search.yahoo.com/_ylt=AwrKD1XRdfRk9Ls4FnS7HAx.;_ylu=Y29sbwNzZzMEcG9zAzEEdnRpZAMEc2VjA3Ny/RV=2/RE=1693771346/RO=10/RU=https%3a%2f%2fen.wikipedia.org%2fwiki%2fHindu_Adoptions_and_Maintenance_Act%2c_1956/RK=2/RS=wNE_zT0n.SXmOK4RfHA2ikGCizE-">Hindu
+                                Adoption and Maintenance Act</a></strong></i>
+                    (1956).<br><br>
 
-                    The Uniform Civil Code (UCC) was introduced in the Indian Parliament in November 2019, but faced
+                    <strong>The Uniform Civil Code (UCC)</strong> was introduced in the Indian Parliament in November
+                    2019, but faced
                     opposition and protests, resulting in its withdrawal. In March 2020, the bill was reintroduced,
                     leading to a plea being filed in the Delhi High Court. The case was subsequently transferred to the
                     Supreme Court, which called for the formation of an Expert Committee or a judicial commission to
@@ -211,118 +374,476 @@
                     and recognized religious organizations to gather their views and ideas on the matter.<br>
 
 
-                    <h2>2)Sharia and Muslim Personal Laws</h2>
-                    <p>Sharia, also known as Islamic law, refers to the Islamic legal framework derived from the teachings of the Quran and the Hadith. It serves as a guide for Muslims in matters of personal conduct, family law, business transactions, and criminal justice, among others. India's Muslim community comprises both Shia and Sunni Muslims. All Muslims in India are governed by the Muslim Personal Law (Shariat) Application Act (1937) and The Dissolution of Muslim Marriages Act (1939). These laws are not applicable in Goa and to Indians, who married under the Special Marriage Act, (1954).<br><br>
+                    <h2>Sharia and Muslim Personal Laws:-</h2>
+                    <p>Sharia, also known as Islamic law, refers to the Islamic legal framework derived from the
+                        teachings of the Quran and the Hadith. It serves as a guide for Muslims in matters of personal
+                        conduct, family law, business transactions, and criminal justice, among others. India's Muslim
+                        community comprises both Shia and Sunni Muslims. All Muslims in India are governed by
+                        the<i><strong><a
+                                    href="https://r.search.yahoo.com/_ylt=AwrKC0Mud_RkP2c5awG7HAx.;_ylu=Y29sbwNzZzMEcG9zAzEEdnRpZAMEc2VjA3Ny/RV=2/RE=1693771695/RO=10/RU=https%3a%2f%2fen.wikipedia.org%2fwiki%2fMuslim_personal_law/RK=2/RS=rMfwpNd3Un2k8UlsQmHww1eWmTA-">Muslim
+                                    Personal Law (Shariat) Application Act</a></strong></i> (1937) and The<i><strong><a
+                                    href="https://r.search.yahoo.com/_ylt=AwrKBHGFdPRkxzw5_By7HAx.;_ylu=Y29sbwNzZzMEcG9zAzEEdnRpZAMEc2VjA3Ny/RV=2/RE=1693771014/RO=10/RU=https%3a%2f%2fen.wikipedia.org%2fwiki%2fDissolution_of_Muslim_Marriages_Act%2c_1939/RK=2/RS=1yKephDm1QXek_tR_9s9z7xUgIE-">Dissolution
+                                    of Muslim Marriage Act</a></strong></i>(1939). These laws are not applicable in Goa
+                        and to Indians, who married under the<i><strong><a
+                                    href="https://en.wikipedia.org/wiki/Special_Marriage_Act,_1954"> the Special
+                                    Marriage Act </a></strong></i> Act, (1954).<br><br>
 
                         Few Islamic practices that have been of great discussion in the past:<br>
-                        </p>
+                    </p>
                     <ul>
-                        <li> Dower, also known as Mahr in Arabic, is a specified sum of money or property that forms an integral part of the marriage contract (Nikah) between the families of the bride and groom. It becomes an obligation for the groom to pay the dower to the bride in the event of divorce or separation. Unlike dowry, which is a transactional payment made during the marriage, the dower represents a symbolic commitment and respect towards the bride.<br><br>
+                        <li> Dower, also known as Mahr in Arabic, is a specified sum of money or property that forms an
+                            integral part of the marriage contract (Nikah) between the families of the bride and groom.
+                            It becomes an obligation for the groom to pay the dower to the bride in the event of divorce
+                            or separation. Unlike dowry, which is a transactional payment made during the marriage, the
+                            dower represents a symbolic commitment and respect towards the bride.<br><br>
 
-                            Mohd. Ahmad Khan v. Shah Bano Begum<br>
-                            Supreme Court of India <br>
-                             23/04/1985<br>
-                            Conclusion of the case:<br>
-                            In 1978, Shah Bano Begum was divorced by her husband. She filed a criminal suit in the Supreme Court of India and successfully obtained the right to alimony from her husband. However, this judgment faced criticism from some Muslims who argued that it contradicted Islamic law as stated in the Quran. In response to pressure and opposition from the All India Muslim Personal Law, Indian Parliament passed the Muslim Women Act in 1986. This legislation diluted the Supreme Court's judgment and limited the right to alimony for Muslim women to a period of 90 days after the divorce, known as the period of Iddah.<br><br>
+
+
                         </li>
-                        <li> Triple Talaq, also known as Talaq-e-bidat, is a provision in Islamic law that enables Muslim men to instantly divorce their wives by uttering or communicating the word "Talaq" thrice without any state intervention. This practice, considered patriarchal, allows men to divorce their wives without their consent, leaving women in a vulnerable position, particularly in a context like India where many women are financially dependent on their husbands.<br><br>
+                        <!-- dropdown -->
+                        <div class="faqs-container">
+                            <div class="faq active">
+                                <h3 class="faq-title">
+                                    Mohd. Ahmad Khan v. Shah Bano Begum<br>
+                                    Supreme Court of India <br>
+                                    23/04/1985<br>
+                                </h3>
+                                <p class="faq-text">
+                                    Conclusion of the case:<br>
+                                    In 1978, Shah Bano Begum was divorced by her husband. She filed a criminal suit in
+                                    the
+                                    Supreme Court of India and successfully obtained the right to alimony from her
+                                    husband.
+                                    However, this judgment faced criticism from some Muslims who argued that it
+                                    contradicted
+                                    Islamic law as stated in the Quran. In response to pressure and opposition from the
+                                    All
+                                    India Muslim Personal Law, Indian Parliament passed the Muslim Women Act in 1986.
+                                    This
+                                    legislation diluted the Supreme Court's judgment and limited the right to alimony
+                                    for Muslim
+                                    women to a period of 90 days after the divorce, known as the period of
+                                    Iddah.<br><br>
+                                </p>
+                                <button class="faq-toggle">
+                                    <i class="fas fa-chevron-down"></i>
+                                    <i class="fas fa-times"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <!-- dropdown -->
+                        <li> Triple Talaq, also known as Talaq-e-bidat, is a provision in Islamic law that enables
+                            Muslim men to instantly divorce their wives by uttering or communicating the word
+                            <strong>"Talaq"</strong> thrice without any state intervention. This practice, considered
+                            patriarchal,
+                            allows men to divorce their wives without their consent, leaving women in a vulnerable
+                            position, particularly in a context like India where many women are financially
+                            dependent on their husbands.<br><br>
 
-                            Shayara Bano v. Union of India  <br> 
-                            Supreme Court of India<br>
-                            22/08/2017<br>
-                            Conclusion of the case:<br>
-                            Shayara Bano, a survivor of domestic violence and dowry harassment, experienced a unilateral and instant divorce through triple talaq in 2016. In her petition, she challenged the legality of practices such as instant triple talaq, polygamy, and Nikah Halala under Muslim personal law. She argued that these practices violated fundamental rights guaranteed by Articles 14 and 15 of the Indian Constitution. On August 22, 2017, the Supreme Court delivered its verdict, with a majority of three out of five judges ruling that the practice of triple talaq was unconstitutional.<br><br>
+
+
+
                         </li>
-                        <li>Nikah Halala is a practice observed by Muslims, combining the words "nikah" (marriage) and "halala" (making something permissible or halal). It involves a specific procedure that a woman, who has been divorced by her husband through triple talaq, must undergo if she wishes to remarry her former husband. The process entails marrying another man, consummating the marriage, and subsequently obtaining a divorce. Only after completing this procedure can she remarry her former husband.<br><br>
+                        <div class="faqs-container">
+                            <div class="faq active">
+                                <h3 class="faq-title">
+                                    Shayara Bano v. Union of India <br>
+                                    Supreme Court of India<br>
+                                    22/08/2017<br>
+                                </h3>
+                                <p class="faq-text">
+                                    Conclusion of the case:<br>
+                                    Shayara Bano, a survivor of domestic violence and dowry harassment, experienced a
+                                    unilateral and instant divorce through triple talaq in 2016. In her petition, she
+                                    challenged the legality of practices such as instant triple talaq, polygamy, and
+                                    Nikah
+                                    Halala under <i><strong>Muslim personal law</strong></i>. She argued that these
+                                    practices violated
+                                    fundamental
+                                    rights guaranteed by <strong>Articles 14 and 15</strong> of the Indian Constitution.
+                                    On August 22,
+                                    2017,
+                                    the Supreme Court delivered its verdict, with a majority of three out of five judges
+                                    ruling that the practice of triple talaq was unconstitutional.<br><br>
+                                </p>
+                                <button class="faq-toggle">
+                                    <i class="fas fa-chevron-down"></i>
+                                    <i class="fas fa-times"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <li>Nikah Halala is a practice observed by Muslims, combining the words <strong>"nikah"</strong>
+                            (marriage)
+                            and <strong>"halala"</strong> (making something permissible or halal). It involves a
+                            specific procedure
+                            that a woman, who has been divorced by her husband through triple talaq, must undergo if
+                            she wishes to remarry her former husband. The process entails marrying another man,
+                            consummating the marriage, and subsequently obtaining a divorce. Only after completing
+                            this procedure can she remarry her former husband.<br><br>
 
 
-                            Sameena Begum v. Union of India<br>
-                            Supreme Court of India <br>
-                            Case registered on March 16, 2018<br>
-                            Sameena Begum, who was divorced by her first husband through triple talaq, lodged a complaint against him under Section 498A of the Indian Penal Code, 1860. She subsequently filed a Public Interest Litigation (PIL) seeking to abolish practices such as Polygamy and Nikah Halala. The court is tasked with determining whether Section 2 of the Muslim Personal Law Application Act, 1937, discriminates against women and infringes upon their right to equality as guaranteed by Articles 14 and 15 of the Indian Constitution.<br><br>
-                            
-                            Apart from the mentioned practices, it has been observed that, traditionally, it was followed that individuals who reached puberty, typically around the age of 15, were considered eligible for marriage. However, this provision of Muslim Law has been superseded by the Prohibition of Child Marriage Act (2006), which establishes the legal minimum age for marriage as 21 for boys and 18 for girls. While there have been notable cases in different High Courts with varying interpretations of the law, the prevailing legal age for marriage in India remains in accordance with the Act.<br><br>
-                            
-                            Regarding polygamy, Sharia law allows Muslim men to have up to four wives simultaneously under specific conditions. It should be noted that full adoption, as practiced in other legal systems, is not recognized under Sharia law. Instead, Islam promotes the concept of "Kafala," which involves providing care for orphaned or abandoned children without altering their legal status or lineage. In matters of inheritance, it is generally observed that male heirs are entitled to a larger share compared to female heirs, although this can vary based on specific circumstances and interpretations.<br><br>
-                            </li>
+
+
+                            <div class="faqs-container">
+                                <div class="faq active">
+                                    <h3 class="faq-title">
+                                        Sameena Begum v. Union of India<br>
+                                        Supreme Court of India <br>
+                                        Case registered on March 16, 2018<br>
+                                    </h3>
+                                    <p class="faq-text">
+                                        Conclusion of the case:<br>
+                                        Sameena Begum, who was divorced by her first husband through triple talaq,
+                                        lodged a
+                                        complaint against him under Section 498A of the Indian Penal Code, 1860. She
+                                        subsequently filed a <i><strong>Public Interest Litigation (PIL)</strong></i>
+                                        seeking to abolish
+                                        practices such
+                                        as Polygamy and Nikah Halala. The court is tasked with determining whether
+                                        Section 2 of
+                                        the <strong>Muslim Personal Law Application Act</strong>, 1937, discriminates
+                                        against women and
+                                        infringes
+                                        upon their right to equality as guaranteed by Articles 14 and 15 of the Indian
+                                        Constitution.<br><br>
+                                    </p>
+                                    <button class="faq-toggle">
+                                        <i class="fas fa-chevron-down"></i>
+                                        <i class="fas fa-times"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            Apart from the mentioned practices, it has been observed that, traditionally, it was
+                            followed that individuals who reached puberty, typically around the age of 15, were
+                            considered eligible for marriage. However, this provision of Muslim Law has been
+                            superseded by the Prohibition of <i><strong><a
+                                        href="https://r.search.yahoo.com/_ylt=AwrPrpcadPRk_0c5SQi7HAx.;_ylu=Y29sbwNzZzMEcG9zAzEEdnRpZAMEc2VjA3Ny/RV=2/RE=1693770907/RO=10/RU=https%3a%2f%2fen.wikipedia.org%2fwiki%2fChild_Marriage_Restraint_Act/RK=2/RS=cWvAV8HIu_Q4xtFLHcOxaf3WICk-">Child
+                                        Marriage Act </a></strong></i>(2006), which establishes the legal
+                            minimum age for marriage as 21 for boys and 18 for girls. While there have been notable
+                            cases in different High Courts with varying interpretations of the law, the prevailing
+                            legal age for marriage in India remains in accordance with the Act.<br><br>
+
+                            Regarding polygamy, Sharia law allows Muslim men to have up to four wives simultaneously
+                            under specific conditions. It should be noted that full adoption, as practiced in other
+                            legal systems, is not recognized under Sharia law. Instead, Islam promotes the concept
+                            of <i><strong>"Kafala,"</strong></i> which involves providing care for orphaned or abandoned children without
+                            altering their legal status or lineage. In matters of inheritance, it is generally
+                            observed that male heirs are entitled to a larger share compared to female heirs,
+                            although this can vary based on specific circumstances and interpretations.<br><br>
+                        </li>
                     </ul>
-                    <h2>3)Christian Personal Laws</h2>
-                    <p>Christians are individuals who adhere to Christianity, a religion based on the teachings of Jesus Christ. In India, there are two main categories of Christians: Catholics and Protestants. Christian civil laws in India are governed by several acts, including the Christian Marriage Act (1872), Indian Divorce Act (1869), Indian Succession Act (1925), and Guardian and Wards Act (1890). These laws were primarily formulated during the British period when people of the same faith constituted the majority, fostering harmony and acceptance within the legal framework. However, conflicts have arisen in various sections of the Indian Succession Act that have been found to be in violation of Article 14 of the Indian Constitution, as highlighted in several court cases.<br><br>
+                    <h2>Christian Personal Laws:-</h2>
+                    <p>Christians are individuals who adhere to Christianity, a religion based on the teachings of Jesus
+                        Christ. In India, there are two main categories of Christians: Catholics and Protestants.
+                        Christian civil laws in India are governed by several acts, including the
+                        <i><strong><a>Christian Marriage Act</a></strong></i>
+                        (1872), <i><strong><a>Indian Divorce Act</a></strong></i> (1869), <i><strong><a>Indian
+                                    Succession Act</a></strong></i> (1925), and <i><strong><a>Guardian and Wards
+                                    Act</a></strong></i>
+                        (1890). These laws were primarily formulated during the British period when people of the same
+                        faith constituted the majority, fostering harmony and acceptance within the legal framework.
+                        However, conflicts have arisen in various sections of the Indian Succession Act that have been
+                        found to be in violation of<a><strong><i> Article 14</a></strong></i> of the Indian
+                        Constitution, as highlighted in several
+                        court cases.<br><br>
 
-                        Mary Roy v. State of Kerala<br>
-                        Supreme Court of India<br>
-                        24/02/1986<br>
-                         Conclusion of the Case<br>
-                        The Travancore Christian Succession Act of 1916 prevented women in the Syrian Christian community from inheriting property. However, the case challenged this inequality and ensured equal inheritance rights for Syrian Christian women in India. The Act was declared invalid after 1951 and was subsequently superseded by the Indian Succession Act of 192<br><br>
-                        
-                        John Vallamattom v. Union of India<br>
-                        Supreme Court of India<br>
-                        21/07/2003<br>
-                        Conclusion of the case:<br><br>
-                        
-                        The petitioner, a Roman Catholic Priest, and Indian citizen, filed a petition arguing that the Indian Succession Act of 1925 imposed limitations on passing property for religious and charitable purposes. The Judge ruled that there was no valid reason to restrict individuals from making testamentary dispositions of personal property for charitable causes. Consequently, the Supreme Court declared Section 118 of the Indian Succession Act, 1925 unconstitutional, as it violated Article 14 of the Indian Constitution.<br><br>
-                        
-                        India, known for its cultural diversity, is also home to Jews, who adhere to the Torah as the divine commandments. While there is generally harmony with Jewish personal laws, a notable case occurred in the Bombay High Court in 2012. A Jewish couple, married according to Jewish customs in a synagogue, filed for divorce. The couple couldn't prove their case and the court didn't move in their favor.<br><br>
-                        </p>
-                        <h2>4)Hindu Law</h2>
-                        <p>Hindu law encompasses a complex and diverse system of personal laws that govern various social and moral aspects of Hindu life. It draws from a range of sources and traditions, reflecting the rich cultural heritage of Hinduism. Hindu law is known for its adaptability and evolution, as it adjusts to the changing needs and circumstances of Hindu society.<br><br>
 
-                            According to Hindu law, an individual is considered Hindu if they follow the Hindu, Sikh, Buddhist, or Jain religion. This definition was explicitly outlined by the Supreme Court of India in the landmark case of Shastri vs Muldas. Hindu Laws comprise 5 different acts, namely the Hindu Marriage Act (1955), the Hindu Succession Act (1956), the Hindu Minority and Guardianship Act (1956), the Hindu Adoptions and Maintenance Act (1956), and the Hindu Disposition of Property Act (1916).<br><br>
-                            
-                            Sikh communities, however, have their own distinct personal laws that are not directly influenced by Hindu law. These laws are governed by the Sikh Gurdwara Act, which specifically regulates matters such as marriage, divorce, and inheritance within the Sikh community.<br><br>
-                            
-                            The Hindu Marriage Act (1955) governs marriage and related matters among Hindus. It provides guidelines for solemnizing Hindu marriages, conditions for a valid marriage, rights, and obligations of spouses, divorce, and restitution of conjugal rights. The Hindu Succession Act (1956) is aimed at providing equal rights of inheritance to male and female heirs. It addresses the rules of intestate succession (when a person dies without leaving a will) among Hindus, including provisions for the devolution of property, inheritance rights of sons and daughters, and the rights of widows.<br>
-                            The Hindu Minority and Guardianship Act (1956) deals with matters related to the custody and guardianship of minor children among Hindus. The Hindu Adoptions and Maintenance Act (1956) governs the legal framework for adoption and maintenance among Hindus. It provides guidelines for adoption procedures, eligibility criteria, and the rights and obligations of adoptive parents and adopted children. The Hindu Disposition of Property Act (1916) pertains to the testamentary disposition of property by Hindus. It covers matters related to wills, gifts, and the distribution of property after death.<br> 
-                            One of the sections of Hindu law encompasses the concept of the Hindu Undivided Family (HUF), which is a legal entity comprising all direct descendants of a common ancestor, along with their wives and unmarried daughters. HUF holds certain tax advantages and succession rights under Hindu law. The beneficiaries of HUF can enjoy various benefits such as income tax benefits, property ownership, life insurance, investments, and health insurance.<br>
-                            Sastri yagnapurushadji vs Muldas brudardas vaishya<br>
-                            Supreme court of India <br>
-                            14-01-1966<br><br>
-                            
-                            Sastri Yaganapurushadji, a follower of the Swaminarayan Sect, challenged the judgment of the Bombay High Court. Muldas Brudardas, the President of the Mahagujarat Dalit Association, expressed his intention to visit the Swaminarayan Temple under the provisions of the Bombay Harijan Temple Entry Act (1947). Sastri sought an injunction to prevent Harijans from entering the temple, raising arguments related to the Act's applicability to Satsangis and the validity of the respondent's vakalatnama (power of attorney). Ultimately, the High Court upheld the constitutionality of the 1956 Act, affirming that followers of the Swaminarayan sect were considered Hindus.<br><br>
+
+                    <div class="faqs-container">
+                        <div class="faq active">
+                            <h3 class="faq-title">
+                                Mary Roy v. State of Kerala<br>
+                                Supreme Court of India<br>
+                                24/02/1986<br>
+                            </h3>
+                            <p class="faq-text">
+                                Conclusion of the Case<br>
+                                The Travancore <strong>Christian Succession Act</strong> of 1916 prevented women in the
+                                Syrian Christian
+                                community from inheriting property. However, the case challenged this inequality and
+                                ensured
+                                equal inheritance rights for Syrian Christian women in India. The Act was declared
+                                invalid after
+                                1951 and was subsequently superseded by the <i><strong>Indian Succession Act of
+                                        192</strong></i><br><br>
                             </p>
-                            <h2>5)NorthEast States:</h2>
-                            <p>The northeastern region of India comprises eight states: Assam, Arunachal Pradesh, Manipur, Meghalaya, Mizoram, Nagaland, Sikkim, and Tripura. This region is home to over 288 tribes, each with its unique customs and traditions. Given our focus on civil matters pertaining to all Indians, it would be neglectful not to delve into the most diversified part of India. However, since we haven't extensively studied every tribe, we will primarily analyze and discuss the majority communities of these states.<br><br>
+                            <button class="faq-toggle">
+                                <i class="fas fa-chevron-down"></i>
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                    </div>
 
-                                Northeast India has distinct rules and regulations that set it apart from mainland India. Arunachal Pradesh, Nagaland, and Mizoram mandate an Inner Line Permit for visitors from other parts of the country. Certain regions in Assam, Meghalaya, Mizoram, and Tripura have autonomous district councils under the Sixth Schedule of the Indian Constitution, granting them legislative, executive, and financial powers. Land ownership rights are restricted for outsiders in Arunachal Pradesh, Nagaland, Mizoram, Meghalaya, Sikkim, Manipur, and parts of Assam and Tripura. Special provisions in the Indian Constitution, such as Articles 371A, 371B, 371C, 371F, 371G, and 371H, offer specific rights, privileges, and protections to Northeastern states. The region also includes protected areas that require authorization for entry, emphasizing the need for preserving its unique ecological heritage.
-                                The Northeastern population has shown a strong inclination towards conservatism and safeguarding their land and traditions. Moreover, the region has witnessed various internal and external tensions since Independence, including movements for autonomy and self-determination, border disputes among states, and international conflicts. These factors have collectively hindered the development of the Northeastern states, despite their abundant resources.<br>
-                                Culturally, the states in the Northeast exhibit significant diversity. Arunachal Pradesh, Assam, Manipur, and Sikkim follow patrilineal societal structures, while Tripura and Nagaland have partial patrilineal systems. On the other hand, Meghalaya and Mizoram practice matrilineal inheritance, where daughters often inherit family property. Polygamy is observed among certain tribes as a means to establish influence and unity between clans or tribes, though the frequency has greatly declined in the present day. Marriages are conducted according to specific tribal or religious customs and traditions, either within the tribes themselves or through civil ceremonies under the Special Marriage Act (1954) when families oppose traditional customs. Although divorce is not prevalent in most tribes of the Northeast, there are a few tribes that do recognize the concept of divorce. In these tribes, the process is usually regulated and overseen by a group of officials or higher elders from the families or tribes involved.<br><br>
-                                
-                                In terms of inheritance and succession, the region demonstrates three main approaches. Matrilineal inheritance is practiced in communities of Meghalaya, Mizoram, and Tripura, where daughters have a significant role in inheriting family property. Patrilineal inheritance, prevalent in Assam, Manipur, Arunachal Pradesh, and Sikkim, generally grants greater inheritance rights to sons than daughters. Several tribes and indigenous communities follow their own customary laws and practices, which can vary greatly. Some communities opt for equal rights to inheritance for all children. Some states have developed their own inheritance and succession laws, while certain communities choose to adhere to The Hindu Succession Act (2005). Notably, women in patrilineal communities may be denied property rights due to concerns that they may marry individuals outside their tribe, potentially leading to the dilution of cultural traditions. Adoption practices also exist, including formal adoptions and the sending of children to relatives' homes for better opportunities, where they are often raised as their own.<br><br>
-                                </p>
-                            <h2><strong>UCC in practice:</strong></h2>
-                            <p>Goa is the only state in India that has a uniform civil code regardless of religion, gender, or caste. Hindus, Muslims, and Christians in Goa are all subject to the same laws on marriage, divorce, and succession. When Goa became part of union territory in 1961 by virtue of the Goa Daman and Diu administration act 1962 the parliament authorized the Portuguese civil code of 1867 to Goa and shall be amended and repealed by the competent legislature.<br><br>
 
-                                The Goa UCC aims to promote equal distribution of wealth and income between spouses and their offspring, regardless of gender. It mandates voluntary registration of all births, marriages, and deaths, with provisions for divorce. Muslims registering marriages in Goa are prohibited from practicing polygamy and triple talaq. Throughout a marriage, all assets and wealth are jointly owned by the couple, entitling each spouse to half the property in case of divorce, or the surviving spouse to half in case of death. Children cannot be completely disinherited, being entitled to at least half of their parent's possessions.<br><br>
-                                
-                                However, the Goa UCC exhibits several shortcomings. Catholics enjoy certain privileges, such as marriage exemption registration and the ability of Catholic priests to dissolve marriages. Catholics can celebrate marriages in church with a No Objection Certificate (NOC), while others only accept civil marriage registration as proof. Non-consummated marriages can be declared null and void by a church tribunal for Catholics, but non-Christians must obtain a divorce through courts. The law allows a specific form of polygamy for Hindus but doesn't extend the Shariat Act to Muslims. Gender disparities also exist, with men being entitled to divorce for their wife's affairs, while women can only obtain a divorce in certain situations, leading to clandestine relationships and abandoned wives.<br><br>
-                                
-                                The existence of the Uniform Civil Code within India serves as a practical example, illustrating how such a law operates. While it aims for equitable practices, it does encounter challenges such as inconsistencies and gender-based disparities, along with certain privileges for specific religious groups. Despite these areas needing attention, the Code has contributed to social harmony and continues to play a crucial role in fostering a unified society in Goa for decades.<br><br>
-                                </p>
-                            <h2><strong>Suggestions: </strong></h2>
-                            <p>We have a range of suggestions aimed at formulating the Uniform Civil Code (UCC) to address key areas that uplift the nation and its citizens. These suggestions encompass crucial focal points for the UCC, focusing on promoting social progress and inclusivity.<br><br>
 
-                                The UCC should prioritize gender justice and equality in all aspects, including marriage, divorce, inheritance, and property rights. Ensuring equal rights and protections for all individuals, irrespective of their gender, is essential. The UCC should strike a balance between promoting common civil laws and respecting cultural and religious practices that are not in conflict with fundamental rights.<br><br>
-                                
-                                The central government should try to involve native states in drafting their own UCCs as they have a deeper understanding of the customs and cultures of the communities residing within their borders. This approach allows state governments to tailor the UCCs to the specific needs and sensitivities of their communities. Furthermore, the central government can gather valuable insights from the state governments on the process and challenges involved in formulating the law, as well as the concerns expressed by different communities.<br><br>
-                                
-                                The government should actively undertake awareness campaigns to educate the public about the UCC. Organizing small awareness camps, particularly in villages where diverse communities coexist, can be an effective approach. These camps should involve experts or students well-versed in the respective fields, who can provide information about the law, its potential impacts, and the measures the government is taking to implement it. Conducting surveys in various villages across India to gather public input and suggestions on effective implementation that aligns with public interests is also crucial.<br><br>
-                                </p>
-                            <h2>Implementation Challenges:   </h2>
-                            <p>In many rural areas of India, as well as in numerous villages and towns of the Northeast region, local panchayats continue to be the preferred forums for resolving disputes, ranging from minor conflicts to more serious crimes. This prevalent reliance on local panchayats, instead of the formal legal system, highlights a lack of effective implementation and regulation of existing laws, which undermines the well-being of citizens. This situation poses a significant challenge to the successful implementation of the Uniform Civil Code (UCC), as the existing legal framework faces obstacles in reaching and providing justice to all individuals in these regions.<br><br>
+                    <div class="faqs-container">
+                        <div class="faq active">
+                            <h3 class="faq-title">
+                                John Vallamattom v. Union of India<br>
+                                Supreme Court of India<br>
+                                21/07/2003<br>
+                            </h3>
+                            <p class="faq-text">
+                                Conclusion of the case:<br>
+                                The petitioner, a Roman Catholic Priest, and Indian citizen, filed a petition arguing
+                                that the
+                                Indian Succession Act of 1925 imposed limitations on passing property for religious and
+                                charitable purposes. The Judge ruled that there was no valid reason to restrict
+                                individuals from
+                                making testamentary dispositions of personal property for charitable causes.
+                                Consequently, the
+                                Supreme Court declared Section 118 of the <i><strong>Indian Succession Act</strong></i>,
+                                1925 unconstitutional,
+                                as it
+                                violated <i><strong>Article 14</strong></i> of the Indian Constitution.<br><br>
+                            </p>
+                            <button class="faq-toggle">
+                                <i class="fas fa-chevron-down"></i>
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                    </div>
 
-                                Moreover, the current UCC bill has encountered opposition from various communities across India, with objections rooted in religious beliefs, cultural practices, and traditional norms. Many communities possess specific rights concerning civil matters as stipulated by the Constitution of India, and there is concern that the implementation of the Uniform Civil Code (UCC) may infringe upon these rights.<br><br>
-                                
-                                India is a culturally diverse country with various regional customs and traditions. Implementing a uniform code that applies to all citizens may face resistance from communities that value their distinct cultural practices. Balancing cultural diversity while ensuring equality and justice for all can be a complex task.<br><br>
-                                </p>
-                            <h2>Conclusion:      </h2>
-                            <p>We have discussed the UCC starting from its origin through its current development and how diverse India is legally having different provisions for various communities. Also, how daunting it must be for the judiciary systems to provide just and quality judgments in a land of differences. On the good side, the enforcement of UCC will help the Judiciary to give better judgments on civil matters related to marriage, divorce, inheritance, adoption, and maintenance that challenge the fundamental rights of the nation’s citizens.<br><br>
+                    India, known for its cultural diversity, is also home to Jews, who adhere to the Torah as the
+                    divine commandments. While there is generally harmony with Jewish personal laws, a notable case
+                    occurred in the <strong>Bombay High Court</strong> in 2012. A Jewish couple, married according to
+                    Jewish customs
+                    in a synagogue, filed for divorce. The couple couldn't prove their case and the court didn't
+                    move in their favor.<br><br>
+                    </p>
+                    <h2>Hindu Law:-</h2>
+                    <p>Hindu law encompasses a complex and diverse system of personal laws that govern various social
+                        and moral aspects of Hindu life. It draws from a range of sources and traditions, reflecting the
+                        rich cultural heritage of Hinduism. Hindu law is known for its adaptability and evolution, as it
+                        adjusts to the changing needs and circumstances of Hindu society.<br><br>
 
-                                Gender justice and equality, embedded in certain traditions and practices, deserve attention. Lengthy court cases highlight the struggle for justice and the need for timely resolution. However, there are significant implementation challenges that must be addressed, including effective communication of the essence of the UCC to avoid misconceptions.<br><br>
-                                
-                                The implementation of the UCC should prioritize upholding the fundamental rights of all citizens and preventing discrimination against any community. It is crucial to ensure that the code respects and protects the rights and interests of every individual, regardless of their background.<br><br>
-                                
-                                A positive update is that some states have voluntarily initiated the drafting of their own UCC under their jurisdiction. Uttarakhand has already prepared its first draft, awaiting release to the central government. This will provide valuable insights into the focus and objectives of the UCC.<br><br>
-                                </p>
+                        According to Hindu law, an individual is considered Hindu if they follow the Hindu, Sikh,
+                        Buddhist, or Jain religion. This definition was explicitly outlined by the Supreme Court of
+                        India in the landmark case of Shastri vs Muldas. Hindu Laws comprise 5 different acts, namely
+                        the <i><strong><a>Hindu Marriage Act</a></strong></i> (1955),<i><strong><a>the Hindu Succession
+                                    Act</a></strong></i> (1956), <i><strong><a>the Hindu Minority and
+                                    Guardianship Act</a></strong></i> (1956),<i><strong><a> the Hindu Adoptions and
+                                    Maintenance Act</a></strong></i> (1956), and <i><strong><a>the Hindu
+                                    Disposition of Property Act </a></strong></i>(1916).<br><br>
+
+                        Sikh communities, however, have their own distinct personal laws that are not directly
+                        influenced by Hindu law. These laws are governed by the Sikh Gurdwara Act, which specifically
+                        regulates matters such as marriage, divorce, and inheritance within the Sikh community.<br><br>
+
+                        The <strong>Hindu Marriage Act</strong> (1955) governs marriage and related matters among
+                        Hindus. It provides
+                        guidelines for solemnizing Hindu marriages, conditions for a valid marriage, rights, and
+                        obligations of spouses, divorce, and restitution of conjugal rights. The <i><strong>Hindu
+                                Succession Act</strong></i>
+                        (1956) is aimed at providing equal rights of inheritance to male and female heirs. It addresses
+                        the rules of intestate succession (when a person dies without leaving a will) among Hindus,
+                        including provisions for the devolution of property, inheritance rights of sons and daughters,
+                        and the rights of widows.<br>
+                        The <strong><i>Hindu Minority and Guardianship Act</strong></i> (1956) deals with matters
+                        related to the custody and
+                        guardianship of minor children among Hindus. The Hindu Adoptions and Maintenance Act (1956)
+                        governs the legal framework for adoption and maintenance among Hindus. It provides guidelines
+                        for adoption procedures, eligibility criteria, and the rights and obligations of adoptive
+                        parents and adopted children. The <strong><i>Hindu Disposition of Property Act</strong></i>
+                        (1916) pertains to the
+                        testamentary disposition of property by Hindus. It covers matters related to wills, gifts, and
+                        the distribution of property after death.<br>
+                        One of the sections of Hindu law encompasses the concept of the Hindu Undivided Family (HUF),
+                        which is a legal entity comprising all direct descendants of a common ancestor, along with their
+                        wives and unmarried daughters. HUF holds certain tax advantages and succession rights under
+                        Hindu law. The beneficiaries of HUF can enjoy various benefits such as income tax benefits,
+                        property ownership, life insurance, investments, and health insurance.<br>
+
+
+                    <div class="faqs-container">
+                        <div class="faq active">
+                            <h3 class="faq-title">
+                                Sastri yagnapurushadji vs Muldas brudardas vaishya<br>
+                                Supreme court of India <br>
+                                14-01-1966<br>
+                            </h3>
+                            <p class="faq-text">
+                                conclusion of the case:
+                                Sastri Yaganapurushadji, a follower of the Swaminarayan Sect, challenged the judgment of
+                                the
+                                Bombay High Court. Muldas Brudardas, the President of the Mahagujarat Dalit Association,
+                                expressed his intention to visit the Swaminarayan Temple under the provisions of the
+                                Bombay
+                                <strong><i>Harijan Temple Entry Act</strong></i> (1947). Sastri sought an injunction to
+                                prevent Harijans from
+                                entering
+                                the temple, raising arguments related to the Act's applicability to Satsangis and the
+                                validity
+                                of the respondent's vakalatnama (power of attorney). Ultimately, the High Court upheld
+                                the<strong><i>
+                                        constitutionality of the 1956 Act</strong></i>, affirming that followers of the
+                                Swaminarayan sect
+                                were
+                                considered Hindus.<br><br>
+                            </p>
+                            <button class="faq-toggle">
+                                <i class="fas fa-chevron-down"></i>
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                    </div>
+                    </p>
+                    <h2>North East States:-</h2>
+                    <p>The northeastern region of India comprises eight states: Assam, Arunachal Pradesh, Manipur,
+                        Meghalaya, Mizoram, Nagaland, Sikkim, and Tripura. This region is home to over 288 tribes, each
+                        with its unique customs and traditions. Given our focus on civil matters pertaining to all
+                        Indians, it would be neglectful not to delve into the most diversified part of India. However,
+                        since we haven't extensively studied every tribe, we will primarily analyze and discuss the
+                        majority communities of these states.<br><br>
+
+                        Northeast India has distinct rules and regulations that set it apart from mainland India.
+                        Arunachal Pradesh, Nagaland, and Mizoram mandate an Inner Line Permit for visitors from other
+                        parts of the country. Certain regions in Assam, Meghalaya, Mizoram, and Tripura have autonomous
+                        district councils under the Sixth Schedule of the Indian Constitution, granting them
+                        legislative, executive, and financial powers. Land ownership rights are restricted for outsiders
+                        in Arunachal Pradesh, Nagaland, Mizoram, Meghalaya, Sikkim, Manipur, and parts of Assam and
+                        Tripura. Special provisions in the Indian Constitution, such as Articles 371A, 371B, 371C, 371F,
+                        371G, and 371H, offer specific rights, privileges, and protections to Northeastern states. The
+                        region also includes protected areas that require authorization for entry, emphasizing the need
+                        for preserving its unique ecological heritage.
+                        The Northeastern population has shown a strong inclination towards conservatism and safeguarding
+                        their land and traditions. Moreover, the region has witnessed various internal and external
+                        tensions since Independence, including movements for autonomy and self-determination, border
+                        disputes among states, and international conflicts. These factors have collectively hindered the
+                        development of the Northeastern states, despite their abundant resources.<br>
+                        Culturally, the states in the Northeast exhibit significant diversity. Arunachal Pradesh, Assam,
+                        Manipur, and Sikkim follow patrilineal societal structures, while Tripura and Nagaland have
+                        partial patrilineal systems. On the other hand, Meghalaya and Mizoram practice matrilineal
+                        inheritance, where daughters often inherit family property. Polygamy is observed among certain
+                        tribes as a means to establish influence and unity between clans or tribes, though the frequency
+                        has greatly declined in the present day. Marriages are conducted according to specific tribal or
+                        religious customs and traditions, either within the tribes themselves or through civil
+                        ceremonies under the<a><strong><i> Special Marriage Act</a></strong></i> (1954) when families
+                        oppose traditional customs.
+                        Although divorce is not prevalent in most tribes of the Northeast, there are a few tribes that
+                        do recognize the concept of divorce. In these tribes, the process is usually regulated and
+                        overseen by a group of officials or higher elders from the families or tribes involved.<br><br>
+
+                        In terms of inheritance and succession, the region demonstrates three main approaches.
+                        Matrilineal inheritance is practiced in communities of Meghalaya, Mizoram, and Tripura, where
+                        daughters have a significant role in inheriting family property. Patrilineal inheritance,
+                        prevalent in Assam, Manipur, Arunachal Pradesh, and Sikkim, generally grants greater inheritance
+                        rights to sons than daughters. Several tribes and indigenous communities follow their own
+                        customary laws and practices, which can vary greatly. Some communities opt for equal rights to
+                        inheritance for all children. Some states have developed their own inheritance and succession
+                        laws, while certain communities choose to adhere to The <a><strong><i>Hindu Succession
+                                    Act</a></strong></i> (2005). Notably,
+                        women in patrilineal communities may be denied property rights due to concerns that they may
+                        marry individuals outside their tribe, potentially leading to the dilution of cultural
+                        traditions. Adoption practices also exist, including formal adoptions and the sending of
+                        children to relatives' homes for better opportunities, where they are often raised as their
+                        own.<br><br>
+                    </p>
+                    <h2><strong>UCC in practice:</strong></h2>
+                    <p>Goa is the only state in India that has a uniform civil code regardless of religion, gender, or
+                        caste. Hindus, Muslims, and Christians in Goa are all subject to the same laws on marriage,
+                        divorce, and succession. When Goa became part of union territory in 1961 by virtue of the Goa
+                        Daman and Diu administration act 1962 the parliament authorized the Portuguese civil code of
+                        1867 to Goa and shall be amended and repealed by the competent legislature.<br><br>
+
+                        The Goa UCC aims to promote equal distribution of wealth and income between spouses and their
+                        offspring, regardless of gender. It mandates voluntary registration of all births, marriages,
+                        and deaths, with provisions for divorce. Muslims registering marriages in Goa are prohibited
+                        from practicing polygamy and triple talaq. Throughout a marriage, all assets and wealth are
+                        jointly owned by the couple, entitling each spouse to half the property in case of divorce, or
+                        the surviving spouse to half in case of death. Children cannot be completely disinherited, being
+                        entitled to at least half of their parent's possessions.<br><br>
+
+                        However, the Goa UCC exhibits several shortcomings. Catholics enjoy certain privileges, such as
+                        marriage exemption registration and the ability of Catholic priests to dissolve marriages.
+                        Catholics can celebrate marriages in church with a <a><strong><i>No Objection Certificate
+                                    (NOC)</a></strong></i>, while others
+                        only accept civil marriage registration as proof. Non-consummated marriages can be declared null
+                        and void by a church tribunal for Catholics, but non-Christians must obtain a divorce through
+                        courts. The law allows a specific form of polygamy for Hindus but doesn't extend the Shariat Act
+                        to Muslims. Gender disparities also exist, with men being entitled to divorce for their wife's
+                        affairs, while women can only obtain a divorce in certain situations, leading to clandestine
+                        relationships and abandoned wives.<br><br>
+
+                        The existence of the Uniform Civil Code within India serves as a practical example, illustrating
+                        how such a law operates. While it aims for equitable practices, it does encounter challenges
+                        such as inconsistencies and gender-based disparities, along with certain privileges for specific
+                        religious groups. Despite these areas needing attention, the Code has contributed to social
+                        harmony and continues to play a crucial role in fostering a unified society in Goa for
+                        decades.<br><br>
+                    </p>
+                    <h2><strong>Suggestions: </strong></h2>
+                    <p>We have a range of suggestions aimed at formulating the Uniform Civil Code (UCC) to address key
+                        areas that uplift the nation and its citizens. These suggestions encompass crucial focal points
+                        for the UCC, focusing on promoting social progress and inclusivity.<br><br>
+
+                        The UCC should prioritize gender justice and equality in all aspects, including marriage,
+                        divorce, inheritance, and property rights. Ensuring equal rights and protections for all
+                        individuals, irrespective of their gender, is essential. The UCC should strike a balance between
+                        promoting common civil laws and respecting cultural and religious practices that are not in
+                        conflict with fundamental rights.<br><br>
+
+                        The central government should try to involve native states in drafting their own UCCs as they
+                        have a deeper understanding of the customs and cultures of the communities residing within their
+                        borders. This approach allows state governments to tailor the UCCs to the specific needs and
+                        sensitivities of their communities. Furthermore, the central government can gather valuable
+                        insights from the state governments on the process and challenges involved in formulating the
+                        law, as well as the concerns expressed by different communities.<br><br>
+
+                        The government should actively undertake awareness campaigns to educate the public about the
+                        UCC. Organizing small awareness camps, particularly in villages where diverse communities
+                        coexist, can be an effective approach. These camps should involve experts or students
+                        well-versed in the respective fields, who can provide information about the law, its potential
+                        impacts, and the measures the government is taking to implement it. Conducting surveys in
+                        various villages across India to gather public input and suggestions on effective implementation
+                        that aligns with public interests is also crucial.<br><br>
+                    </p>
+                    <h2>Implementation Challenges: </h2>
+                    <p>In many rural areas of India, as well as in numerous villages and towns of the Northeast region,
+                        local panchayats continue to be the preferred forums for resolving disputes, ranging from minor
+                        conflicts to more serious crimes. This prevalent reliance on local panchayats, instead of the
+                        formal legal system, highlights a lack of effective implementation and regulation of existing
+                        laws, which undermines the well-being of citizens. This situation poses a significant challenge
+                        to the successful implementation of the<a><strong><i> Uniform Civil Code (UCC)</a></strong></i>,
+                        as the existing legal
+                        framework faces obstacles in reaching and providing justice to all individuals in these
+                        regions.<br><br>
+
+                        Moreover, the current UCC bill has encountered opposition from various communities across India,
+                        with objections rooted in religious beliefs, cultural practices, and traditional norms. Many
+                        communities possess specific rights concerning civil matters as stipulated by the Constitution
+                        of India, and there is concern that the implementation of the Uniform Civil Code (UCC) may
+                        infringe upon these rights.<br><br>
+
+                        India is a culturally diverse country with various regional customs and traditions. Implementing
+                        a uniform code that applies to all citizens may face resistance from communities that value
+                        their distinct cultural practices. Balancing cultural diversity while ensuring equality and
+                        justice for all can be a complex task.<br><br>
+                    </p>
+                    <h2>Conclusion: </h2>
+                    <p>We have discussed the UCC starting from its origin through its current development and how
+                        diverse India is legally having different provisions for various communities. Also, how daunting
+                        it must be for the judiciary systems to provide just and quality judgments in a land of
+                        differences. On the good side, the enforcement of UCC will help the Judiciary to give better
+                        judgments on civil matters related to marriage, divorce, inheritance, adoption, and maintenance
+                        that challenge the fundamental rights of the nation’s citizens.<br><br>
+
+                        Gender justice and equality, embedded in certain traditions and practices, deserve attention.
+                        Lengthy court cases highlight the struggle for justice and the need for timely resolution.
+                        However, there are significant implementation challenges that must be addressed, including
+                        effective communication of the essence of the UCC to avoid misconceptions.<br><br>
+
+                        The implementation of the UCC should prioritize upholding the fundamental rights of all citizens
+                        and preventing discrimination against any community. It is crucial to ensure that the code
+                        respects and protects the rights and interests of every individual, regardless of their
+                        background.<br><br>
+
+                        A positive update is that some states have voluntarily initiated the drafting of their own UCC
+                        under their jurisdiction. Uttarakhand has already prepared its first draft, awaiting release to
+                        the central government. This will provide valuable insights into the focus and objectives of the
+                        UCC.<br><br>
+                    </p>
 
 
 
@@ -349,10 +870,10 @@
                         Location : IIT Kharagpur, Kharagpur, WB, India
                     </p>
                     <ul class="footer__social">
-                        <li> <a href="https://www.facebook.com/civilservicesclub.iitkgp/" target="_blank"><i class="fa-brands fa-facebook"
-                                    aria-hidden="true"></i></a></li>
-                        <li> <a href="https://www.instagram.com/civilservicesclub.iitkgp/reels/" target="_blank"><i class="fa-brands fa-instagram"
-                                    aria-hidden="true"></i></a></li>
+                        <li> <a href="https://www.facebook.com/civilservicesclub.iitkgp/" target="_blank"><i
+                                    class="fa-brands fa-facebook" aria-hidden="true"></i></a></li>
+                        <li> <a href="https://www.instagram.com/civilservicesclub.iitkgp/reels/" target="_blank"><i
+                                    class="fa-brands fa-instagram" aria-hidden="true"></i></a></li>
                         <li> <a href="https://www.youtube.com/@civilservicesclub.iitkgp" target="_blank"><i
                                     class="fa-brands fa-youtube" aria-hidden="true"></i></a></li>
                         <li> <a href="https://www.linkedin.com/company/civil-services-club-iitkgp" target="_blank"><i
@@ -361,11 +882,11 @@
                 </div>
                 <div class="col-six tab-full end">
                     <ul class="footer__site-links">
-                        <li class="current" class="smoothscroll"  ><a href="index.html" title="intro">Home</a></li>
-                        <li class="current" class="smoothscroll"  ><a  href="about.html" title="intro">About</a></li>
-                        <li class="current"class="smoothscroll"  ><a  href="Faqs.html" title="intro">FAQS</a></li>
-                        <li class="current" class="smoothscroll"  ><a  href="team.html" title="intro">Team</a></li>
-                        
+                        <li class="current" class="smoothscroll"><a href="index.html" title="intro">Home</a></li>
+                        <li class="current" class="smoothscroll"><a href="about.html" title="intro">About</a></li>
+                        <li class="current" class="smoothscroll"><a href="Faqs.html" title="intro">FAQS</a></li>
+                        <li class="current" class="smoothscroll"><a href="team.html" title="intro">Team</a></li>
+
                     </ul>
                     <p class="footer__contact">
                         Do you have a question? Send us a word: <br>
