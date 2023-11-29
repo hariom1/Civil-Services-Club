@@ -116,7 +116,7 @@
             transition: 0.3s ease;
         }
 
-        .faq.active {
+        .faq .active {
             background-color: #fff;
             box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.1);
         }
@@ -150,7 +150,7 @@
             margin: 30px 0 0;
         }
 
-        .faq.active .faq-text {
+        .faq.active {
             display: block;
         }
 
@@ -176,7 +176,7 @@
             outline: none;
         }
 
-        .faq.active .faq-toggle {
+        .faq .active .faq-toggle {
             background-color: #9FA4A8;
         }
 
@@ -184,7 +184,7 @@
             display: none;
         }
 
-        .faq.active .faq-toggle .fa-times {
+        .faq .active .faq-toggle .fa-times {
             display: block;
         }
 
@@ -192,20 +192,36 @@
             color: #83888E;
         }
 
-        .faq.active .faq-toggle .fa-chevron-down {
+        .faq .active .faq-toggle .fa-chevron-down {
             display: none;
         }
         a{
             color: rgb(255,152,1);
         }
     </style>
-    <script>
-        const toggles = document.querySelectorAll('.faq-toggle');
+    <!-- <script>
+        // const toggles = document.querySelectorAll('.faq-toggle');
 
-        toggles.forEach(toggle => {
-            toggle.addEventListener('click', () => {
-                toggle.parentNode.classList.toggle('active');
-            });
+        // toggles.forEach(toggle => {
+        //     toggle.addEventListener('click', () => {
+        //         toggle.parentNode.classList.toggle('active');
+        //     });
+        // });
+        let fachevrondown = document.getElementsByClassName("fa-chevron-down");
+        let fatimes = document.getElementsByClassName("fa-times");
+        let faqtext = document.getElementsByClassName("faq-text");
+        let faqtoggle = document.getElementsByClassName("faq-toggle");
+        faqtoggle.addEventListener('click', () => {
+            console.log('clicked');
+            faqtext.style.display = 'block';
+            fatimes.style.display = 'block';
+            fachevrondown.style.display = 'none';
+
+        });
+        fatimes.addEventListener('click', () => {
+            faqtext.style.display = 'none';
+            fatimes.style.display = 'none';
+            fachevrondown.style.display = 'block';
         });
 
         // SOCIAL PANEL JS
@@ -220,7 +236,7 @@
         close_btn.addEventListener('click', () => {
             social_panel_container.classList.remove('visible')
         });
-    </script>
+    </script> -->
 
 </head>
 <!--Start of the page-->
@@ -561,7 +577,7 @@
                                 24/02/1986<br>
                             </h3>
                             <p class="faq-text">
-                                Conclusion of the Case<br>
+                                Conclusion of the Case:<br>
                                 The Travancore <strong>Christian Succession Act</strong> of 1916 prevented women in the
                                 Syrian Christian
                                 community from inheriting property. However, the case challenged this inequality and
@@ -924,6 +940,49 @@
         integrity="sha512-Gi7xpJR8tSkrpF7aordPZQlW2DLtzUlZcumS8dMQjwDHEnw9I7ZLyiOj/6tZStRBGtGgN6ceN6cMH8z7etPGlw=="
         data-cf-beacon='{"rayId":"73602870f89e33b4","token":"cd0b4b3a733644fc843ef0b185f98241","version":"2022.6.0","si":100}'
         crossorigin="anonymous"></script>
+    
+        <script>
+            // const toggles = document.querySelectorAll('.faq-toggle');
+    
+            // toggles.forEach(toggle => {
+            //     toggle.addEventListener('click', () => {
+            //         toggle.parentNode.classList.toggle('active');
+            //     });
+            // });
+            let fachevrondown = document.getElementsByClassName("fa-chevron-down");
+            let fatimes = document.getElementsByClassName("fa-times");
+            let faqtext = document.getElementsByClassName("faq-text");
+            let faqtoggle = document.getElementsByClassName("faq-toggle");
+            for(let i=0; i<faqtoggle.length; i++){
+            faqtoggle[i].addEventListener('click', () => {
+                if(faqtext[i].style.display != 'block'){
+                    console.log('clicked');
+                    faqtext[i].style.display = 'block';
+                    fatimes[i].style.display = 'block';
+                    fachevrondown[i].style.display = 'none';
+                }
+                else{
+                    console.log('clicked');
+                    faqtext[i].style.display = 'none';
+                    fatimes[i].style.display = 'none';
+                    fachevrondown[i].style.display = 'block';
+                }
+            });
+            }
+    
+            // SOCIAL PANEL JS
+            const floating_btn = document.querySelector('.floating-btn');
+            const close_btn = document.querySelector('.close-btn');
+            const social_panel_container = document.querySelector('.social-panel-container');
+    
+            floating_btn.addEventListener('click', () => {
+                social_panel_container.classList.toggle('visible')
+            });
+    
+            close_btn.addEventListener('click', () => {
+                social_panel_container.classList.remove('visible')
+            });
+        </script>
 </body>
 
 </html>
